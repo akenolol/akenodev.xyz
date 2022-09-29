@@ -3,15 +3,21 @@
 
 <head>
     <!--Useful meta tags-->
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
     <meta name="robots" content="index, follow, noodp" />
     <meta name="googlebot" content="index, follow" />
     <meta name="google" content="notranslate" />
     <meta charset="UTF-8" />
+    <meta name="description" content="<%= owner.username %> is a Software Developer and is only 16!
+Click to find out more!">
+<meta property="og:title" content="<%= owner.username %>">
+    <meta property="og:description" content="<%= owner.username %> is a Software Developer and is only 16!
+Click to find out more!">
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/<%= owner.id %>/<%= owner.avatar %>.gif?size=1024">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--Preloader JS-->
     <script type="text/javascript" src="./assets/js/preloader.js"></script>
+
     <!--Preloader Style-->
     <link rel="stylesheet" href="./assets/css/preload.css">
     <!--Bootstrap Stylesheet-->
