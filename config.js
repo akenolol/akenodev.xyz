@@ -1,21 +1,21 @@
 module.exports.webApp = {
     port: 3000,
-    host: "http://localhost",
+    host: "https://akenodev.xyz",
 },
 
 module.exports.owner = {
     id: "547923574833545226",
     supportServer: "1014190469628055552",
-    botToken: "MTAyNTExNTI3NTExNDMxOTg4Mw.G43iFy.O3qFaLsB5x5m0NItNi6fNiky3Ye3WId4cL5nrE",
-    githubToken: "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"
+    botToken: "MTAyNTExNTI3NTExNDMxOTg4Mw.G83zgK.FzSnNTTS0nvB93U-2bjYKwjsjO7CBxtkk6QhW8",
+    githubToken: "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"
 },
 
 
 module.exports.projects = {
     1: {
-        name: "akenolol.github.io",
+        name: "akenodev.xyz",
         description: "The Official Github Repo for akenodev.xyz.",
-        url: "https://github.com/akenolol/akenolol.github.io",
+        url: "https://github.com/akenolol/akenodev.xyz",
         image: "https://cdn.discordapp.com/icons/1014190469628055552/a_a92a1b63d4ae364ea0e17ad6526bd16b.gif",
     },
     2: {
