@@ -12,7 +12,7 @@ const DiscordClient = require("./utils/discordClient.js");
 const discordClient = new DiscordClient();
 const config = require("./config");
 const port = process.env.PORT || config.webApp.port;
-const status = new Status(`${config.webApp.host}:${port}`);
+const status = new Status(`${config.webApp.host}`);
 const { Octokit } = require("@octokit/core");
 
 
