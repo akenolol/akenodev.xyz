@@ -1,0 +1,538 @@
+/*---------------------------------------------------------------------------------------
+* Template Name      :  RectCV - Personal Bootstrap 4 HTML Template                      |
+* Author             :  Narek Sukiasyan                                                  |
+* Version            :  1.1.0                                                            |
+* Created            :  April 2020                                                       |
+* Updated            :  February 2021                                                    |
+* File Description   :  Dark theme css file of the template                              |
+*----------------------------------------------------------------------------------------
+*/
+/******************
+Table of Content
+
+    1. SETTINGS
+        1.1 Preloader
+        1.2 Form Control
+    2. HELPER
+        2.1 Social Icons Design
+        2.2 Button Toggler
+        2.3 OWL Slider
+    3. HEADER
+        3.1 General Header Style
+        3.2 Horizontal Header Style
+    4. HOME SECTION
+        4.1 Parallax Element Colors
+        4.2 Scroll Down Button
+    5. ABOUT SECTION
+    6. SERVICE SECTION
+    7. PORTFOLIO SECTION
+    8. RESUME SECTION
+    9. TESTIMONIAL SECTION
+    10. BLOG SECTION
+    11. CONTACT SECTION
+    12. FOOTER SECTION
+    13. FACTS SECTION
+    14. PROJECT SECTION
+    15. VIDEO SECTION
+
+******************/
+/*=================
+    1. SETTINGS
+==================*/
+body {
+  background-color: #1e2326;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #F0F0F0;
+}
+
+a {
+  color: #F0F0F0;
+}
+
+p {
+  color: #b5b5b5;
+}
+
+article p, article ul, article ol, article blockquote {
+  color: #b5b5b5;
+}
+
+hr {
+  border-top: 1px solid #252b2f;
+}
+
+/* 1.1 Preloader */
+#preloader {
+  background-color: #1e2326;
+}
+
+blockquote footer {
+  color: #F0F0F0;
+}
+
+/* 1.2 Form Control */
+.form-control:disabled,
+.form-control.disabled,
+.form-control[readonly] {
+  opacity: .5;
+  color: #c2c2c2;
+  background-color: initial;
+}
+
+/*=================
+    2. HELPER
+==================*/
+section .section-title h2.rect_heading, div.section .section-title h2.rect_heading {
+  border: 1px solid #31383d;
+}
+
+section .section-title h2.text_background span.heading_background, div.section .section-title h2.text_background span.heading_background {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+}
+
+section .section-title p, div.section .section-title p {
+  color: #F0F0F0;
+  font-weight: 300;
+}
+
+section.backgound-section, div.section.backgound-section {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(30, 35, 38, 0.7);
+          box-shadow: inset 0 0 0 2000px rgba(30, 35, 38, 0.7);
+  -webkit-appearance: none;
+}
+
+section.preload, div.section.preload {
+  background-attachment: scroll;
+}
+
+main section .form-group label {
+  color: #F0F0F0;
+  opacity: .6;
+}
+
+main section .form-group.form-focused label {
+  background-color: #1e2326;
+  opacity: 1;
+}
+
+main section.background_gpattern {
+  background-image: url("../images/background_pattern.svg");
+}
+
+main section:not(.backgound-section):not(.home):nth-child(odd) {
+  background-color: #252b2f;
+}
+
+main section:not(.backgound-section):not(.home):nth-child(odd) .form-group.form-focused label {
+  background-color: #252b2f;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.01);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.01);
+}
+
+/* 2.1 Social Icons Design */
+.social-icons li a {
+  border: 1px solid #31383d;
+}
+
+.social-icons li a:hover {
+  background: #F0F0F0;
+  color: #1e2326;
+}
+
+/* 2.2 Button Toggler */
+.button-toggler {
+  background: transparent;
+}
+
+.button-toggler span {
+  background-color: #F0F0F0;
+}
+
+a.hoveroff:hover {
+  text-decoration: none;
+  color: #F0F0F0;
+}
+
+/* 2.3 OWL Slider */
+.owl-nav button span {
+  font-weight: 700;
+}
+
+.toTop {
+  background-color: #2c3236;
+  color: #F0F0F0;
+  font-size: 1.2em;
+}
+
+/*=================
+    3. HEADER
+==================*/
+/* 3.1 General Header Style */
+header .site-logo a {
+  font-weight: 500;
+}
+
+/* 3.2 Horizontal Header Style */
+header.horizontal_header .header-ins {
+  background-color: #1e2326;
+  padding: 17px 0px;
+}
+
+header.horizontal_header .header-ins.transparent_header {
+  background-color: transparent;
+}
+
+header.horizontal_header .header-ins:not(.transparent_header).shadow-header {
+  -webkit-box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.06);
+}
+
+header.horizontal_header ul li a {
+  font-weight: 500;
+}
+
+header.horizontal_header ul li a:after {
+  color: #fff;
+}
+
+/*====================
+    4. HOME SECTION
+=====================*/
+section.home {
+  -webkit-box-shadow: inset 0px -10px 10px 0px rgba(30, 35, 38, 0.75);
+          box-shadow: inset 0px -10px 10px 0px rgba(30, 35, 38, 0.75);
+  /* 4.1 Parallax Element Colors */
+}
+
+section.home h1 {
+  border: 1px solid #F0F0F0;
+}
+
+section.home .background-parallax .element.red {
+  -webkit-box-shadow: 0px 0px 190px 260px rgba(229, 65, 68, 0.1);
+          box-shadow: 0px 0px 190px 260px rgba(229, 65, 68, 0.1);
+}
+
+section.home .background-parallax .element.blue {
+  -webkit-box-shadow: 0px 0px 160px 200px rgba(26, 123, 183, 0.1);
+          box-shadow: 0px 0px 160px 200px rgba(26, 123, 183, 0.1);
+}
+
+section.home .background-parallax .element.green {
+  -webkit-box-shadow: 0px 0px 145px 220px rgba(28, 186, 90, 0.1);
+          box-shadow: 0px 0px 145px 220px rgba(28, 186, 90, 0.1);
+}
+
+section.home .background-parallax .element.orange {
+  -webkit-box-shadow: 0px 0px 165px 210px rgba(240, 127, 129, 0.1);
+          box-shadow: 0px 0px 165px 210px rgba(240, 127, 129, 0.1);
+}
+
+h1 {
+  font-weight: 600;
+  color: #F0F0F0;
+}
+
+span.welcome_text {
+  color: #F0F0F0;
+  font-weight: 400;
+}
+
+/* 4.2 Scroll Down Button */
+.scroll-down .scroll-title {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.scroll-down .scroll-mouse {
+  border: 2px solid #F0F0F0;
+}
+
+.scroll-down .scroll-mouse .whell {
+  background-color: #F0F0F0;
+}
+
+/*====================
+    5. ABOUT SECTION
+=====================*/
+section.about h3 {
+  font-weight: 500;
+}
+
+section.about .about-info span {
+  color: #b5b5b5;
+}
+
+section.about .about-info span.desc {
+  color: #F0F0F0;
+}
+
+/*=======================
+    6. SERVICE SECTION
+========================*/
+.service-single {
+  background-color: #1e2326;
+  border: 1px solid #31383d;
+}
+
+.service-single h3 {
+  color: #F0F0F0;
+}
+
+/*=======================
+    7. PORTFOLIO SECTION
+========================*/
+.portfolio-item .portfolio-single:hover {
+  color: #F0F0F0;
+}
+
+.portfolio-item .item-box .item-details {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.portfolio-item .item-box .item-details .item-detail-rect {
+  border: 3px solid #fff;
+}
+
+.portfolio-item .item-box .item-details .item-detail-rect.r1 {
+  top: 3px;
+  left: 3px;
+}
+
+.portfolio-item .item-box .item-details .item-detail-rect.r2 {
+  bottom: 3px;
+  right: 3px;
+}
+
+.portfolio-item .item-box .item-details .item-details-ins {
+  color: #fff;
+}
+
+.portfolio-item .item-box .item-details .item-details-ins h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.portfolio-item .item-box .item-details .item-details-ins p {
+  color: #fff;
+}
+
+/*=======================
+    8. RESUME SECTION
+========================*/
+.resume-title {
+  font-weight: 500;
+  color: #F0F0F0;
+}
+
+.resume-list li:before {
+  border: 2px solid #31383d;
+}
+
+.resume-list li:after {
+  background-color: #31383d;
+  width: 2px;
+  height: calc(100% - 43px);
+  border-radius: 3px;
+  top: 33px;
+  left: 10px;
+}
+
+.resume-list h3 {
+  font-weight: 500;
+}
+
+.resume-list h4 {
+  font-weight: 500;
+}
+
+.resume-list span.time {
+  color: #F0F0F0;
+  font-weight: 300;
+}
+
+.skill .progress {
+  background-color: #252b2f;
+}
+
+.skill .skill-icon {
+  color: #F0F0F0;
+}
+
+.skill .progresss-info span {
+  font-weight: 400;
+  color: #F0F0F0;
+}
+
+.skill .progresss-info span.progress-percent {
+  font-weight: 500;
+}
+
+/*===========================
+    9. TESTIMONIAL SECTION
+============================*/
+.testimonial-box {
+  border: 2px solid #1e2326;
+  line-height: 23.5px;
+  background-color: #1e2326;
+}
+
+.testimonial-box .author_picture {
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+/*=======================
+    10. BLOG SECTION
+========================*/
+.news-item {
+  background-color: #1e2326;
+  border: 1px solid #31383d;
+}
+
+.news-item .news-content .news-title .blog-permalink h3 {
+  font-weight: 600;
+  color: #F0F0F0;
+}
+
+.news-item .news-content .news-meta-single {
+  font-weight: 300;
+  color: #F0F0F0;
+}
+
+.news-item .news-content .news-excerpt p {
+  color: #F0F0F0;
+}
+
+/*=======================
+    11. CONTACT SECTION
+========================*/
+.contact-details h5 {
+  font-weight: 500;
+  color: #F0F0F0;
+}
+
+.contact-details p {
+  color: #F0F0F0;
+}
+
+.form-control {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: 1px solid #31383d;
+  border-radius: 0px;
+  background-color: transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: .9em 1em;
+  color: #F0F0F0;
+}
+
+.form-control:focus {
+  background-color: transparent;
+  border: 1px solid #31383d;
+  color: #F0F0F0;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #AAAAAA;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+.form-control::placeholder {
+  color: #AAAAAA;
+}
+
+/*=======================
+    12. FOOTER SECTION
+========================*/
+footer.horizontal-footer {
+  background-color: #1e2326;
+}
+
+footer.horizontal-footer.shadow_footer {
+  -webkit-box-shadow: 0px -1px 8px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px -1px 8px 3px rgba(0, 0, 0, 0.06);
+}
+
+footer.horizontal-footer .copyright-text {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/*==========================
+    13. FACTS SECTION
+===========================*/
+section.facts .fact-single, div.section.facts .fact-single {
+  color: #F0F0F0;
+}
+
+/*==========================
+    14. PROJECT SECTION
+===========================*/
+section.project .box, div.section.project .box {
+  background-color: #1e2326;
+}
+
+/*==========================
+    15. VIDEO SECTION
+===========================*/
+section.about_movie {
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-video-play {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  background-color: #1e2326;
+}
+
+.btn-video-play:hover {
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(250, 250, 250, 0.2);
+          box-shadow: 0px 0px 0px 8px rgba(250, 250, 250, 0.2);
+}
+
+/*==========================
+    16. SWITCHER SECTION
+===========================*/
+#color-switcher .switcher-area {
+  background-color: #1e2326;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.02);
+}
+
+#color-switcher a.switch-layout {
+  border: 1px solid #F0F0F0;
+}
+
+#color-switcher a.switch-layout.active {
+  background-color: #F0F0F0;
+  color: #1e2326;
+}
+/*# sourceMappingURL=dark.theme.css.map */
