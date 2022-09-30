@@ -114,7 +114,6 @@ app.post("/webhooks/github", (req, res) => {
   const repo = req.body.repository.name;
   const action = req.body.action;
   const sender = req.body.sender.login;
-  const branch = req.body.ref("refs/heads/", "");
   const url = req.body.repository.html_url;
   const commits = req.body.commits;
   const commitsArray = [];
@@ -132,7 +131,7 @@ app.post("/webhooks/github", (req, res) => {
     repo: repo,
     action: action,
     sender: sender,
-    branch: branch,
+    branch: "main",
     url: url,
     commits: commitsArray,
   })
