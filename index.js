@@ -107,6 +107,41 @@ app.get("/status", (req, res) => {
 })
 
 
+app.post("/webhooks/github", (req, res) => {
+  const event = req.headers["x-github-event"];
+  const id = req.headers["x-github-delivery"];
+  const signature = req.headers["x-hub-signature"];
+  const repo = req.body.repository.name;
+  const action = req.body.action;
+  const sender = req.body.sender.login;
+  const branch = req.body.ref.replace("refs/heads/", "");
+  const url = req.body.repository.html_url;
+  const commits = req.body.commits;
+  const commitsArray = [];
+
+  if (event == "push") {
+    for (const commit in commits) {
+      commitsArray.push(commits[commit]);
+    }
+  }
+
+  res.json({
+    event: event,
+    id: id,
+    signature: signature,
+    repo: repo,
+    action: action,
+    sender: sender,
+    branch: branch,
+    url: url,
+    commits: commitsArray,
+  })
+
+  logger.log(`New webhook event from ${sender} on ${repo} (${branch})`);
+  logger.log(`Event: ${event} | Action: ${action}`);
+  logger.log(`Commits: ${commitsArray.length}`);
+})
+
 
 
 app.listen(port, () => {
