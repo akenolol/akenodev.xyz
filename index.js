@@ -62,6 +62,21 @@ app.get("/", async (req, res) => {
   })
 })
 
+
+app.post("/contact", (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const subject = req.body.subject;
+  const message = req.body.text;
+
+  discordClient.postContactMessage(name, email, subject, message).then((channel) => {
+    res.json({
+      success: "Message sent successfully",
+      message: channel,
+    })
+  })  
+})
+
 app.get("/redirect", (req, res) => {
   const url = req.query.url;
   if (url == null || url == "" || url == undefined) {
