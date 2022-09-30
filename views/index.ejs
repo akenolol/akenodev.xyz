@@ -710,6 +710,48 @@ Click to find out more!">
                             </div>
                         </div>
 
+                        <div class="row mt-5">
+                            <div class="col-lg-12">
+                                <form action="/contact" method="post">
+                                    <div class="row">
+                                        <div class="col-lg-6 mt-3">
+                                            <div class="form-group">
+                                                <input type="text" name="name" id="name" class="form-control" autocomplete="off" required>
+                                                <label>Full Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mt-3">
+                                            <div class="form-group">
+                                                <input type="email" name="email" id="email" class="form-control" autocomplete="off" required>
+                                                <label>Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-3">
+                                            <div class="form-group">
+                                                <input type="text" name="subject" id="subject" class="form-control" autocomplete="off" required>
+                                                <label>Subject</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-3">
+                                            <div class="form-group">
+                                                <textarea name="text" id="text" rows="6" class="form-control" required></textarea>
+                                                <label>Message</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-3">
+                                            <div class="form-group mb-0 text-right">
+                                                <button type="submit" id="contact-btn" class="btn btn-outline-primary btn-bg">
+                                                    Send Message
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+      
+                    </div>
+
 
 
 
@@ -722,7 +764,7 @@ Click to find out more!">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <p class="copyright-text mt-3 mb-5">2022 ©. <%= owner.username %>.</p>
+                            <p class="copyright-text mt-3 mb-5">2022 ©. <a href="https://discordapp.com/users/<%= owner.id %>"><%= owner.username %></a>.</p>
                         </div>
                     </div>
                 </div>
