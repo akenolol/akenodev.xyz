@@ -130,10 +130,12 @@
       <button class="buttons close" id="close"></button>
       <button class="buttons maximize" href="#"></button>
       <button class="buttons minimize" href="#"></button>
-      <div class="title">Akeno Dev Redirect - redirect...</div>
+      <div class="title">Redirect - redirect...</div>
     </div>
     <div class="bash">
-      <span id="span">[root@akenodev.tk ~]:$ </span>
+      <!-- Create a Hidden Input with the value of HOST -->
+      <input type="hidden" id="host" value="<%=HOST %>" />
+      <span id="span">[root@<%= HOST %> ~]:$ </span>
       <span id="command"></span>
       <br>
       <span id="redirectSpan"> </span>
@@ -148,13 +150,14 @@
       </div>
     </div>
     <script>
+      var host = document.getElementById("host").value;
       var query = window.location.search.substring(1);
       var url = query.split("=")[1];
       let commandField = document.getElementById("command");
       let resultField = document.getElementById("result");
       let redirectSpan = document.getElementById("redirectSpan");
 
-      let terminalText = "[root@akenodev.tk ~]:$ ";
+      let terminalText = `[root@${host} ~]:$ `;
       
       let time = 9;
       let redirectCommand = `redirect ${url} --time 9`
