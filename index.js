@@ -86,6 +86,7 @@ app.get("/redirect", (req, res) => {
   } else {
     res.render("redirect", {
       REDIRECT_URL: url,
+      HOST: req.hostname,
       REDIRECT_URL_SHORT: url
         .replace("https://", "")
         .replace("http://", "")
@@ -96,7 +97,6 @@ app.get("/redirect", (req, res) => {
     logger.log("Redirecting to " + url);
   }
 });
-
 app.get("/status", (req, res) => {
   status.getStatus().then((status) => {
     res.render("status", {
