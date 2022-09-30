@@ -17,7 +17,6 @@ Click to find out more!">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--Preloader JS-->
     <script type="text/javascript" src="./assets/js/preloader.js"></script>
-
     <!--Preloader Style-->
     <link rel="stylesheet" href="./assets/css/preload.css">
     <!--Bootstrap Stylesheet-->
@@ -50,6 +49,8 @@ Click to find out more!">
     <link rel="stylesheet" href="./assets/css/default.css" id="optional-color" />
     <!--MAIN TITLE-->
     <title>Akeno Dev :: Home</title>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".scrollspy" data-offset="85">
@@ -156,7 +157,9 @@ Click to find out more!">
                 <div class="section-content flex-grow-1">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-md-6">
-                            <div class="avatar-area m-auto">
+                            <div class="avatar-area m-auto"
+                            style="width: 450; height: 450;  border-radius: 50%;">
+                            
                                 <% if (owner.avatar.includes("a_")) { %>
                                     <img src="https://cdn.discordapp.com/avatars/<%= owner.id %>/<%= owner.avatar %>.gif?size=1024"
                                         width="400" height="550" alt="" class="img-fluid mx-auto">
@@ -376,7 +379,7 @@ Click to find out more!">
                         <% projects.forEach(element=> { %>
                             <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
                                 <div class="portfolio-item">
-                                    <a href="<%= element.url %>" class="portfolio-single">
+                                    <a href="<%= element.url %> " class="portfolio-single">
                                         <div class="item-box">
                                             <div class="item-image">
                                                 <img src="<%= element.image %>" width="350" height="410"
@@ -393,12 +396,17 @@ Click to find out more!">
                                                     <p>
                                                         <%= element.description %>
                                                     </p>
+                                                    <p>
+                                                        <%= element.language %>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
+
+                            
                             <% }) %>
 
 
@@ -750,6 +758,8 @@ Click to find out more!">
     <script src="./assets/js/alert.js"></script>
     <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/repos.js"></script>
+   
     <script>
 
         window.onload = function () {
