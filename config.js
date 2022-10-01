@@ -1,37 +1,42 @@
 module.exports.webApp = {
     port: 3000,
-    host: "https://akenodev.xyz",
+    host: "http://localhost",
 },
 
 module.exports.owner = {
-    id: "547923574833545226",
-    supportServer: "1014190469628055552",
-    botToken: "MTAyNTExNTI3NTExNDMxOTg4Mw.G83zgK.FzSnNTTS0nvB93U-2bjYKwjsjO7CBxtkk6QhW8",
-    githubToken: "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"
-},
+        id: "547923574833545226",
+        supportServer: "https://discord.gg/d9fd8CHWP3",
+        botToken: "MTAyNTExNTI3NTExNDMxOTg4Mw.G83zgK.FzSnNTTS0nvB93U-2bjYKwjsjO7CBxtkk6QhW8",
+        githubToken: "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",
+
+        profile: {
+            usename: "akenodev",
+            password: "JS4Life"
+        }
+    },
 
 
-module.exports.languages = {
-    "JavaScript": "JavaScript",
-    "TypeScript": "TypeScript",
-    "HTML": "HTML",
-    "CSS": "CSS",
-    "Python": "Python",
-    "Java": "Java",
-    "C#": "C#",
-    "C++": "C++",
-    "C": "C",
-    "PHP": "PHP",
-    "Ruby": "Ruby",
-    "Go": "Go",
-    "Rust": "Rust",
-    "Swift": "Swift",
-    "Kotlin": "Kotlin",
-    "Dart": "Dart",
-    "R": "R",
-    "Shell": "Shell",
-    "Objective-C": "Objective-C",
-};
+    module.exports.languages = {
+        "JavaScript": "JavaScript",
+        "TypeScript": "TypeScript",
+        "HTML": "HTML",
+        "CSS": "CSS",
+        "Python": "Python",
+        "Java": "Java",
+        "C#": "C#",
+        "C++": "C++",
+        "C": "C",
+        "PHP": "PHP",
+        "Ruby": "Ruby",
+        "Go": "Go",
+        "Rust": "Rust",
+        "Swift": "Swift",
+        "Kotlin": "Kotlin",
+        "Dart": "Dart",
+        "R": "R",
+        "Shell": "Shell",
+        "Objective-C": "Objective-C",
+    };
 
 module.exports.frameworks = {
     "React": "React",
@@ -98,5 +103,22 @@ module.exports.projects = {
         language: `${this.languages.JavaScript}`,
         framework: `${this.frameworks.Discordjs}`,
     }
+
+}
+
+module.exports.profile = {
+    aboutMe: ["Web Developer", "Discord / Telegram Bot Developer", "Discord Moderator", "Reddit Moderator", "Software Developer", "Anime Voice Actor"],
+    socials: {
+        github: "https://github.com/akenolol",
+        twitter: "https://twitter.com/akeno_dev",
+        reddit: "https://www.reddit.com/user/premage1010",
+        discord: "https://discordapp.com/users/547923574833545226",
+        telegram: "https://t.me/akenodev",
+    },
+    languages: [
+        " en",
+        " jp",
+    ],
+
 
 }
