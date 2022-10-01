@@ -28,6 +28,7 @@ app.use(express.static("public"));
 
 app.get("/", async (req, res) => {
   discordClient.getOwnerInfo().then(async (owner) => {
+  
     
     const octokit = new Octokit({
       auth: `${config.owner.githubToken}`,
@@ -38,18 +39,34 @@ app.get("/", async (req, res) => {
     const userData = u.data;
 
     const projects = config.projects;
+    const contributors = config.contributors;
     
 
     const projectsArray = [];
+    const contributorsArray = [];
 
     for (const project in projects) {
       projectsArray.push(projects[project]);
     }
 
+
+
+    
+
+    
+    for (const contributor in contributors) {
+      contributorsArray.push(contributors[contributor]);
+    }
+
     const companyReal = userData.company.replace("@", "");
     res.render("index", {
       owner: owner,
+      supportServer: config.owner.supportServer,
       projects: projectsArray,
+      aboutMe: config.profile.aboutMe,
+      languages: config.profile.languages,
+      socials: config.profile.socials,
+      contributors: contributorsArray,
       isHireable: userData.hireable,
       company: userData.company,
       companyReal: companyReal,
