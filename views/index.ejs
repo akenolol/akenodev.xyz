@@ -124,7 +124,7 @@ Click to find out more!">
             <div class="container introduction text-center">
                 <p class="welcome_text mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">I'm a
                     <span class="welcome-text-type"
-                        data-options="Web Developer, Software Developer, Starting Voice Actor, Bot Developer"></span>
+                        data-options="<%= aboutMe %> "></span>
                 </p>
                 <div id="parallax-scene" class="mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
                     <div class="heading-zone">
@@ -177,6 +177,7 @@ Click to find out more!">
                             </p>
                             <div class="row">
                                 <div class="col-lg-6">
+                                    
                                     <div class="about-info mb-2">
                                         <span class="desc">📛 Name:</span>
                                         <span>Hayden (<%= owner.username %>) </span>
@@ -198,10 +199,13 @@ Click to find out more!">
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="about-info mb-2">
-                                        <span class="desc">🧪 Experience:</span>
-                                        <span>3 years</span>
+                                        <span class="desc">🗣️ Languages:</span>
+                                        <span>
+                                            <%= languages %>
+                                        </span>
                                     </div>
                                 </div>
+                               
                                 <div class="col-lg-6">
                                     <div class="about-info mb-2">
                                         <span class="desc">💼 Looking for Jobs:</span>
@@ -222,6 +226,22 @@ Click to find out more!">
                                         <span><a href="https://github.com/<%= companyReal %>">
                                                 <%= company %>
                                             </a></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="about-info mb-2">
+                                        <i class="fa-brands fa-discord"></i>
+                                        <span class="desc"> Discord Server: </span>
+                                        <span><a href="<%= supportServer %> ">
+                                                discord.gg/
+                                            </a></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="about-info mb-2">
+                                        <i class="fa-brands fa-twitter"></i>
+                                        <span class="desc"> Twitter:</span>
+                                        <span><a href="<%= socials.twitter %>">@akeno_dev</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -322,7 +342,7 @@ Click to find out more!">
                         <div class="col-lg-4 col-md-6 mt-4 mb-2">
                             <div class="service-single text-center p-5">
                                 <div class="service-icon">
-                                    <p>⌨️</p>
+                                    <i class="fa-solid fa-code-branch"></i>
                                 </div>
                                 <h3 class="my-3">Development</h3>
                                 <p>I Create <strong>GAMES</strong>, <strong>APPS</strong>, <strong>WEBSITES</strong>,
@@ -332,7 +352,7 @@ Click to find out more!">
                         <div class="col-lg-4 col-md-6 mt-4 mb-2">
                             <div class="service-single text-center p-5">
                                 <div class="service-icon">
-                                    <p>⌛️</p>
+                                    <i class="fa-solid fa-shield"></i>
                                 </div>
                                 <h3 class="my-3">Responsive</h3>
                                 <p>I Create Quick, Easy, and Amazing Projects.</p>
@@ -341,7 +361,7 @@ Click to find out more!">
                         <div class="col-lg-4 col-md-6 mt-4 mb-2">
                             <div class="service-single text-center p-5">
                                 <div class="service-icon">
-                                    <p>🤖</p>
+                                    <i class="fa-solid fa-robot"></i>
                                 </div>
                                 <h3 class="my-3">Bot Development</h3>
                                 <p>In My Spare Time I also create <a href="https://discord.com">Discord</a> Bots!</p>
@@ -356,6 +376,7 @@ Click to find out more!">
 
         <!--SERVICE SECTION START-->
 
+        
 
         <!--PORTFOLIO SECTION START-->
         <section class="portfolio" id="portfolio">
@@ -573,96 +594,6 @@ Click to find out more!">
         <!--RESUME SECTION START-->
 
 
-        <!--CLIENT SECTION START-->
-        <!-- <div class="section testimonial backgound-section" style="background-image: url(./assets/images/background_3.jpg)">
-          <div class="container">
-              <div class="row">
-                  <div id="client_slider" class="owl-carousel owl-theme">
-                      <div class="col-12">
-                          <div class="testimonial-box d-flex flex-column flex-md-row justify-content-between align-items-start p-5">
-                              <div class="testimonial_icon mr-4">
-                                  <span class="mbri-quote-left"></span>
-                              </div>
-                              <div class="testimonial_content mt-3">
-                                  <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, tenetur nisi iste, ipsa obcaecati quis laudantium error distinctio excepturi</p>
-                                  <div class="testimonial_author row mt-3">
-                                      <div class="col-12 col-md-7 col-lg-5 col-xl-4">
-                                          <div class="row">
-                                              <div class="col-12 col-md-3">
-                                                  <div class="author_picture mr-3" style="background-image: url(./assets/images/client1.jpg)"></div>
-                                              </div>
-                                              <div class="col-12 col-md-9">
-                                                  <div class="author_info py-2">
-                                                      <h3>Linzi Landry</h3>
-                                                      <p>Graphic Designer</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-12">
-                          <div class="testimonial-box d-flex flex-column flex-md-row justify-content-between align-items-start p-5">
-                              <div class="testimonial_icon mr-4">
-                                  <span class="mbri-quote-left"></span>
-                              </div>
-                              <div class="testimonial_content mt-3">
-                                  <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, tenetur nisi iste, ipsa obcaecati quis laudantium error distinctio excepturi</p>
-                                  <div class="testimonial_author row mt-3">
-                                      <div class="col-12 col-md-7 col-lg-5 col-xl-4">
-                                          <div class="row">
-                                              <div class="col-12 col-md-3">
-                                                  <div class="author_picture mr-3" style="background-image: url(./assets/images/client2.jpg)"></div>
-                                              </div>
-                                              <div class="col-12 col-md-9">
-                                                  <div class="author_info py-2">
-                                                      <h3>Ebony Phan</h3>
-                                                      <p>Web Developer</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      
-                                      
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-12">
-                          <div class="testimonial-box d-flex flex-column flex-md-row justify-content-between align-items-start p-5">
-                              <div class="testimonial_icon mr-4">
-                                  <span class="mbri-quote-left"></span>
-                              </div>
-                              <div class="testimonial_content mt-3">
-                                  <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, tenetur nisi iste, ipsa obcaecati quis laudantium error distinctio excepturi</p>
-                                  <div class="testimonial_author row mt-3">
-                                      <div class="col-12 col-md-7 col-lg-5 col-xl-4">
-                                          <div class="row">
-                                              <div class="col-12 col-md-3">
-                                                  <div class="author_picture mr-3" style="background-image: url(./assets/images/client3.jpg)"></div>
-                                              </div>
-                                              <div class="col-12 col-md-9">
-                                                  <div class="author_info py-2">
-                                                      <h3>Mikaela Palmer</h3>
-                                                      <p>CEO of Company</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      
-                                      
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-      </div> -->
-        <!--CLIENT SECTION END-->
 
 
 
@@ -705,7 +636,7 @@ Click to find out more!">
                                 </div>
                                 <div class="contact-details mt-2">
                                     <h5>Join the Server</h5>
-                                    <p><a href="https://discord.gg/d9fd8CHWP3">discord.gg....</a></p>
+                                    <p><a href="<%= supportServer %>">discord.gg/</a></p>
                                 </div>
                             </div>
                         </div>
@@ -764,7 +695,9 @@ Click to find out more!">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <p class="copyright-text mt-3 mb-5">2022 ©. <a href="https://discordapp.com/users/<%= owner.id %>"><%= owner.username %></a>.</p>
+                            <p class="copyright-text mt-3 mb-5">Made with <i class="fa fa-heart"></i> by <a href="<%= socials.github %>"><%= owner.username %></a></p>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -777,7 +710,7 @@ Click to find out more!">
 
     <!--To Top Link START-->
     <a href="#" class="toTop" id="return-to-top">
-        <p>🔝</p>
+        <i class="fa-solid fa-angle-up"></i>
     </a>
     <!--To Top Link END-->
 
@@ -800,7 +733,7 @@ Click to find out more!">
     <script src="./assets/js/alert.js"></script>
     <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/custom.js"></script>
-    <script src="./assets/js/repos.js"></script>
+    <script src="https://kit.fontawesome.com/b2ded0cdec.js" crossorigin="anonymous"></script>
    
     <script>
 
