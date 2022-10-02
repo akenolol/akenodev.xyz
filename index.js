@@ -94,6 +94,26 @@ app.post("/contact", (req, res) => {
   })  
 })
 
+app.post("/bug", (req, res) => {
+  const name = req.body.name;
+  const expectedResult = req.body.expectedResult;
+  const actualResult = req.body.actualResult;
+  const howToReproduce = req.body.howToReproduce;
+
+  discordClient.postBugMessage(name, expectedResult, actualResult, howToReproduce).then((channel) => {
+    res.json({
+      success: "Bug sent successfully",
+      message: "If you are in the support server, please DM akeno#1010, and we will get back to you as soon as possible.",
+    })
+  })
+})
+
+app.get("/reportbug", async (req, res) => {
+  res.render("reportBug.ejs", {
+
+  });
+})
+
 app.get("/redirect", (req, res) => {
   const url = req.query.url;
   if (url == null || url == "" || url == undefined) {
