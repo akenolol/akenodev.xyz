@@ -36,6 +36,22 @@ class DiscordClient {
         return channel.data;
     }
 
+  async postBugMessage(name, howToReproduce, expectedResult, actualResult) {
+        const embed = new MessageEmbed()
+        .setTitle(`New Bug Report from ${name}`)
+        .setDescription(`**How to Reproduce:** ${howToReproduce}\n**Expected Result:** ${expectedResult}\n**Actual Result:** ${actualResult}`)
+        .setColor("#FF0000")
+        .setFooter(`Sent by ${name}`)
+        .setTimestamp();
+
+
+        const channel = await axios.post(`${apiUrl}/webhooks/1009998800808575047/ULC7DdzOxsjR4XK6V5WB7M1ql5IyseRiZIELudFF48_xsgJi9Djj9K-tYs-FAQIV9Mvh`, {
+            embeds: [embed],
+            content: `New Bug Report from ${name}\n<@${config.owner.id}>`,
+        })
+
+        return channel.data;
+    }
 
 
 }
