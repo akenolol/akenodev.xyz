@@ -1,6 +1,6 @@
 module.exports.webApp = {
     port: 3000,
-    host: "http://localhost",
+    host: "https://akenodev.xyz",
 },
 
 module.exports.owner = {
