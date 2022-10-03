@@ -58,15 +58,24 @@ app.get("/", async (req, res) => {
       contributorsArray.push(contributors[contributor]);
     }
 
+   const codingLanguages = config.languages;
+
+    const codingLanguagesArray = [];
+
+    for (const language in codingLanguages) {
+      codingLanguagesArray.push(codingLanguages[language]);
+    }
+
+
     const companyReal = userData.company.replace("@", "");
     res.render("index", {
       owner: owner,
       supportServer: config.owner.supportServer,
       projects: projectsArray,
+      codingLanguages: codingLanguagesArray,
       aboutMe: config.profile.aboutMe,
       languages: config.profile.languages,
-      socials: config.profile.socials,
-      contributors: contributorsArray,
+      socials: socials,
       isHireable: userData.hireable,
       company: userData.company,
       companyReal: companyReal,
