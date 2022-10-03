@@ -17,42 +17,68 @@ module.exports.owner = {
 
 
     module.exports.languages = {
-        "JavaScript": "JavaScript",
-        "TypeScript": "TypeScript",
-        "HTML": "HTML",
-        "CSS": "CSS",
-        "Python": "Python",
-        "Java": "Java",
-        "C#": "C#",
-        "C++": "C++",
-        "C": "C",
-        "PHP": "PHP",
-        "Ruby": "Ruby",
-        "Go": "Go",
-        "Rust": "Rust",
-        "Swift": "Swift",
-        "Kotlin": "Kotlin",
-        "Dart": "Dart",
-        "R": "R",
-        "Shell": "Shell",
-        "Objective-C": "Objective-C",
+        "JavaScript": {
+            name: "JavaScript",
+            options: {
+                percentile: "98"
+            }
+        },
+        "TypeScript": {
+            name: "TypeScript",
+            options: {
+                percentile: "90"
+            }
+        },
+        "HTML": {
+            name: "HTML",
+            options: {
+                percentile: "69"
+            }
+        },
+        "CSS": {
+            name: "CSS",
+            options: {
+                percentile: "87"
+            }
+        },
+        "Python": {
+            name: "Python",
+            options: {
+                percentile: "67"
+            }
+        },
+        "Java": {
+            name: "Java",
+            options: {
+                percentile: "40"
+            }
+        },
+        "C#": {
+            name: "C#",
+            options: {
+                percentile: "90"
+            }
+        },
+        "C++": {
+            name: "C++",
+            options: {
+                percentile: "54"
+            }
+        },
+        "C": {
+            name: "C",
+            options: {
+                percentile: "50"
+            }
+        },
+        "Shell": {
+            name: "Shell",
+            options: {
+                percentile: "30"
+            }
+        },
     };
 
-module.exports.frameworks = {
-    "React": "React",
-    "Vue": "Vue",
-    "Angular": "Angular",
-    "Express": "Express",
-    "Django": "Django",
-    "Flask": "Flask",
-    "Laravel": "Laravel",
-    "Spring": "Spring",
-    "Discordjs": "Discord.js",
-    "Discordpy": "Discord.py",
-    "Bodyparser": "body-parser",
-    "Cors": "Cors",
-    "Ejs": "Ejs",
-}
 
 module.exports.projects = {
     1: {
