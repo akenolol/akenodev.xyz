@@ -528,81 +528,27 @@ Click to find out more!">
 
                     </div>
                     <div class="row mt-5">
-                        <div class="col-lg-6">
-                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                                <div class="skill-progress flex-grow-1">
-                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                                        <span>JavaScript</span>
-                                        <span class="text-right progress-percent">97%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" data-percent="97"
-                                            aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                                <div class="skill-progress flex-grow-1">
-                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                                        <span>C / C++ / C#</span>
-                                        <span class="text-right progress-percent">70%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" data-percent="70"
-                                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        <% codingLanguages.forEach(element => { %>
+                            <div class="col-lg-6">
+                                <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
+                                    <div class="skill-progress flex-grow-1">
+                                        <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
+                                            <span><%= element.name %> </span>
+                                            <span class="text-right progress-percent"><%= element.options.percentile %>%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" data-percent="<%= element.options.percentile %>"
+                                                aria-valuenow="<%= element.options.percentile %>" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
                                     </div>
                                 </div>
+    
                             </div>
+                        <% }) %>
+                        
+                       
 
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                                <div class="skill-progress flex-grow-1">
-                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                                        <span>HTML 5</span>
-                                        <span class="text-right progress-percent">95%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" data-percent="95"
-                                            aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                                <div class="skill-progress flex-grow-1">
-                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                                        <span>CSS 3</span>
-                                        <span class="text-right progress-percent">85%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" data-percent="85"
-                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                                <div class="skill-progress flex-grow-1">
-                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                                        <span>Discord.js</span>
-                                        <span class="text-right progress-percent">97%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" data-percent="97"
-                                            aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        
                     </div>
                 </div>
 
