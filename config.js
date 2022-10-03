@@ -79,6 +79,69 @@ module.exports.owner = {
         },
     };
 
+module.exports.frameworks = {
+    Express: {
+        name: "Express",
+        options: {
+            percentile: "98",
+        },
+    },
+    React: {
+        name: "React",
+        options: {
+            percentile: "44",
+        },
+    },
+    Vue: {
+        name: "Vue",
+        options: {
+            percentile: "32",
+        },
+    },
+    Angular: {
+        name: "Angular",
+        options: {
+            percentile: "27",
+        },
+    },
+    EJS: {
+        name: "EJS",
+        options: {
+            percentile: "98",
+        }
+    },
+    Nextjs: {
+        name: "Next.js",
+        options: {
+            percentile: "53",
+        }
+    },
+    ReactNative: {
+        name: "React Native",
+        options: {
+            percentile: "32",
+        }
+    },
+    Socketio: {
+        name: "Socket.io",
+        options: {
+            percentile: "31",
+        }
+    },
+    Svelte: {
+        name: "Svelte",
+        options: {
+            percentile: "27",
+        }
+    },
+    Electron: {
+        name: "Electron",
+        options: {
+            percentile: "43",
+        }
+    }
+};
+
 
 module.exports.projects = {
     1: {
