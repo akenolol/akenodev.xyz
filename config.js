@@ -86,8 +86,6 @@ module.exports.projects = {
         description: "The Official Github Repo for akenodev.xyz.",
         url: "https://github.com/akenolol/akenodev.xyz",
         image: "https://cdn.discordapp.com/icons/1014190469628055552/a_a92a1b63d4ae364ea0e17ad6526bd16b.gif",
-        language: `${this.languages.JavaScript} | ${this.languages.HTML} | ${this.languages.CSS}`,
-        framework: `${this.frameworks.Express} | ${this.frameworks.Bodyparser} | ${this.frameworks.Cors} | ${this.frameworks.Ejs}`,
     },
     2: {
         name: "Goddess-Bot",
