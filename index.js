@@ -29,6 +29,15 @@ app.use(express.static("public"));
 app.get("/", async (req, res) => {
   discordClient.getOwnerInfo().then(async (owner) => {
   
+    const projectsArray = [];
+    const codingLanguagesArray = [];
+    const frameworksArray = [];
+
+    const projects = config.projects;
+    const socials = config.profile.socials;
+    const codingLanguages = config.languages;
+    const frameworks = config.frameworks;
+
     
     const octokit = new Octokit({
       auth: `${config.owner.githubToken}`,
@@ -38,12 +47,10 @@ app.get("/", async (req, res) => {
     
     const userData = u.data;
 
-    const projects = config.projects;
-    const contributors = config.contributors;
     
 
-    const projectsArray = [];
-    const contributorsArray = [];
+
+    
 
     for (const project in projects) {
       projectsArray.push(projects[project]);
@@ -51,19 +58,12 @@ app.get("/", async (req, res) => {
 
 
 
-    const socials = config.profile.socials;
-
-    
-    for (const contributor in contributors) {
-      contributorsArray.push(contributors[contributor]);
-    }
-
-   const codingLanguages = config.languages;
-
-    const codingLanguagesArray = [];
-
     for (const language in codingLanguages) {
       codingLanguagesArray.push(codingLanguages[language]);
+    }
+
+    for (const framework in frameworks) {
+      frameworksArray.push(frameworks[framework]);
     }
 
 
@@ -84,6 +84,7 @@ app.get("/", async (req, res) => {
       twitter: userData.twitter_username,
       repos: userData.public_repos,
       followers: userData.followers,
+      frameworks: frameworksArray,
     });
   })
 })
