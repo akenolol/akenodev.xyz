@@ -51,7 +51,7 @@ app.get("/", async (req, res) => {
 
 
 
-    
+    const socials = config.profile.socials;
 
     
     for (const contributor in contributors) {
