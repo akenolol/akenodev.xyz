@@ -145,6 +145,7 @@ Click to find out more!">
                 <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="450">
                     <a href="#about" class="btn  btn-primary btn-small"><i class="fa-solid fa-file"></i> Learn More</a>
                     <button class="btn  btn-primary btn-small" onclick="window.location.href='/reportbug'" > <i class="fa-solid fa-bug"></i> Report a Bug</button>
+                    <button class="btn btn-secondary btn-small" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-hashtag"></i> Social Media</button>
                 </div>
             </div>
         </section>
@@ -733,6 +734,29 @@ Click to find out more!">
         <i class="fa-solid fa-angle-up"></i>
     </a>
     <!--To Top Link END-->
+
+    <!-- Start Social Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: black;"><%= owner.username %> - Social Media </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Click on a social media icon to open it in a new tab.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='<%= socials.github %>'"><i class="fa-brands fa-github"></i> Github</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='<%= socials.twitter %>'"><i class="fa-brands fa-twitter"></i> Twitter</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='<%= socials.reddit %>'"><i class="fa-brands fa-reddit"></i> Reddit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Social Modal -->
 
 
 
