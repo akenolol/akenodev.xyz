@@ -94,40 +94,30 @@ module.exports.projects = {
         description: "The Source Code for The Server Goddess (https://cafe.akenodev.xyz.invite/).",
         url: "https://github.com/akenolol/Goddess-Bot",
         image: "https://cdn.discordapp.com/avatars/1006316455886860329/8df894fb0eb61a03200d86d5eaf52867.png?size=1024",
-        language: `${this.languages.JavaScript}`,
-        framework: `${this.frameworks.Discordjs} | ${this.frameworks.Express}`,
     },
     3: {
         name: "react-todo-app",
         description: "A simple todo app made with React.",
         url: "https://github.com/akenolol/react-todo-app",
         image: "https://cdn.discordapp.com/attachments/981632133191843852/1025205816472653884/3203-reactjs.png",
-        language: `${this.languages.JavaScript} | ${this.languages.CSS} | ${this.languages.HTML}`,
-        framework: `${this.frameworks.React}`,
     },
     4: {
         name: "Basic-Web-Server",
         description: "A Basic Web Server in nodejs. Built with express.",
         url: "https://github.com/akenolol/Basic-Web-Server",
         image: "https://cdn.discordapp.com/attachments/981632133191843852/1025205418194120745/4408_nodejs.png",
-        language: `${this.languages.JavaScript}`,
-        framework: `${this.frameworks.Express} | ${this.frameworks.Bodyparser} | ${this.frameworks.Cors} `,
     },
     5: {
         name: "c-program",
         description: "A Simple Program to Show How C Works.",
         url: "https://github.com/akenolol/c-program",
         image: "https://cdn.iconscout.com/icon/free/png-512/c-programming-569564.png",
-        language: `${this.languages.C}`,
-        framework: "None",
     },
     6: {
         name: "Akeno-Bartender-Bot",
         description: "The Discord bot For https://discord.gg/g78PTzfMMP",
         url: "https://github.com/akenolol/Akeno-Bartender-Bot",
         image: "https://cdn.discordapp.com/attachments/981632133191843852/1025204888944267306/DJNekoWag.gif",
-        language: `${this.languages.JavaScript}`,
-        framework: `${this.frameworks.Discordjs}`,
     }
 
 }
