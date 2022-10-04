@@ -19,6 +19,7 @@ Click to find out more!">
     <script type="text/javascript" src="./assets/js/preloader.js"></script>
     <!--Preloader Style-->
     <link rel="stylesheet" href="./assets/css/preload.css">
+    
     <!--Bootstrap Stylesheet-->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" as="style"
         onload="this.rel='stylesheet';this.removeAttribute('onload');">
@@ -55,9 +56,9 @@ Click to find out more!">
 
     <style>
         /* Make the cursor ./assets/cursors/cursor.cur */
-        * {
+        /* * {
             cursor: url(./assets/cursors/cursor.cur), auto;
-        }
+        } */
     </style>
 
 
@@ -65,11 +66,11 @@ Click to find out more!">
 
 <body data-spy="scroll" data-target=".scrollspy" data-offset="85">
     <!--PRELOADER START-->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="text-center w-100">
             <div class="loader"></div>
         </div>
-    </div>
+    </div> -->
     <!--PRELOADER END-->
     <!--HEADER START-->
     <header class="navigation horizontal_header transparentOnScroll navbar navbar-expand-lg fixed-top">
@@ -465,8 +466,6 @@ Click to find out more!">
 
 
 
-
-
         <!--RESUME SECTION START-->
         <section class="resume" id="resume">
 
@@ -522,6 +521,37 @@ Click to find out more!">
                                         learning a lot!
                                     </p>
                                 </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!--RESUME SECTION START-->
+
+        <section class="resume" id="resume">
+
+            <div class="container d-flex flex-column justify-content-between h-100 ">
+
+                <div class="section-content flex-grow-1">
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <h3 class="mb-4"><i class="fa-solid fa-bug"></i> Current Issues</h3>
+                            <ul class="list-inline resume-list">
+                                <% currentIssues.forEach(element => { %>
+                                    <li>
+                                        <h4 class="mb-2"><a href="https://github.com/akenolol/akenodev.xyz/issues/<%= element.number %> "><%= element.title %> </a>
+                                        </h4>
+                                        <span class="time">Issue Opened By: <%= element.user.login %> </span>
+                                        <p class="my-2">State: <%= element.state %>  </p>
+                                    </li>
+                                <% }) %>
+                                
+
                             </ul>
                         </div>
 
@@ -727,6 +757,7 @@ Click to find out more!">
 
 
         </footer>
+
     </main>
 
     <!--To Top Link START-->
@@ -749,9 +780,9 @@ Click to find out more!">
           Click on a social media icon to open it in a new tab.
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary" onclick="window.location.href='<%= socials.github %>'"><i class="fa-brands fa-github"></i> Github</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='<%= socials.twitter %>'"><i class="fa-brands fa-twitter"></i> Twitter</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='<%= socials.reddit %>'"><i class="fa-brands fa-reddit"></i> Reddit</button>
+            <button type="button" class="btn btn-warning" onclick="window.location.href='<%= socials.github %>'"><i class="fa-brands fa-github"></i> Github</button>
+            <button type="button" class="btn btn-info" onclick="window.location.href='<%= socials.twitter %>'"><i class="fa-brands fa-twitter"></i> Twitter</button>
+            <button type="button" class="btn btn-danger" onclick="window.location.href='<%= socials.reddit %>'"><i class="fa-brands fa-reddit"></i> Reddit</button>
         </div>
       </div>
     </div>
@@ -759,7 +790,9 @@ Click to find out more!">
   <!-- End Social Modal -->
 
 
-
+  <noscript>
+    <p>Please Enable <strong>Javascript</strong>to use this webapp.</p>
+</noscript>
     <!--JS FILES-->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="./assets/js/jquery.js"></script>
