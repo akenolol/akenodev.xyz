@@ -18,6 +18,15 @@ class DiscordClient {
         return owner.data;
     }
 
+    async getUserInfo(id)
+    {
+        const user = await axios.get(`${apiUrl}/users/${id}`, {
+          headers: {
+              'Authorization': `Bot ${config.owner.botToken}`,
+          }
+        })
+        return user.data;
+    }
 
     async postContactMessage(name, email, subject, message) {
         const embed = new MessageEmbed()
@@ -36,7 +45,7 @@ class DiscordClient {
         return channel.data;
     }
 
-  async postBugMessage(name, howToReproduce, expectedResult, actualResult) {
+    async postBugMessage(name, howToReproduce, expectedResult, actualResult) {
         const embed = new MessageEmbed()
         .setTitle(`New Bug Report from ${name}`)
         .setDescription(`**How to Reproduce:** ${howToReproduce}\n**Expected Result:** ${expectedResult}\n**Actual Result:** ${actualResult}`)
@@ -52,6 +61,28 @@ class DiscordClient {
 
         return channel.data;
     }
+
+
+    async getServerWidget(serverId, bannerStyle) {
+        const styles = {
+            shield: "shield",
+            banner1: "banner1",
+            banner2: "banner2",
+            banner3: "banner3",
+            banner4: "banner4"
+        }
+
+        
+        if (styles[bannerStyle] == undefined) {
+            throw new Error(`Banner Style not valid: ${bannerStyle}`)
+        }
+        else {
+            return `https://discordapp.com/api/guilds/${serverId}/widget.png?style=${styles[bannerStyle]}`
+        }
+    }
+
+    
+
 
 
 }
