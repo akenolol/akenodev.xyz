@@ -1,21 +1,27 @@
+// await octokit.request("GET /repos/{owner}/{repo}/issues", {
+//     owner: "octocat",
+//     repo: "Spoon-Knife"
+//   });
 const { Octokit } = require("@octokit/core");
+const config = require("../config");
+
+const octokit = new Octokit({
+    auth: `${config.owner.githubToken}`,
+  })
 
 
-class GithubClient {
-    constructor(username) {
-        this.username = username;
-
+class githubClient {
+    constructor() {
+        this.octokit = octokit;
     }
 
-    async getRepos() {
-
+    async getIssues() {
+        const issues = await this.octokit.request("GET /repos/{owner}/{repo}/issues", {
+            owner: "akenolol",
+            repo: "akenodev.xyz",
+        });
+        return issues.data;
     }
-
-    async getUserData() {
-        
-        
-    }
-
 }
 
-module.exports = GithubClient;
+module.exports = githubClient;
