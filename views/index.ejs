@@ -66,7 +66,7 @@ Click to find out more!">
 
 <body data-spy="scroll" data-target=".scrollspy" data-offset="85">
     <!--PRELOADER START-->
-     <div id="preloader">
+    <div id="preloader">
         <div class="text-center w-100">
             <div class="loader"></div>
         </div>
@@ -107,7 +107,12 @@ Click to find out more!">
                     </li>
 
                     <li>
-                        <a href="<%= supportServer %> " class="nav-link">Discord Server</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+
+                    <li>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#discordModal">Join
+                            Discord</button>
                     </li>
                 </ul>
                 <!--Main Navigation END-->
@@ -147,6 +152,7 @@ Click to find out more!">
                     <a href="#about" class="btn  btn-primary btn-small"><i class="fa-solid fa-file"></i> Learn More</a>
                     <button class="btn  btn-primary btn-small" onclick="window.location.href='/reportbug'" > <i class="fa-solid fa-bug"></i> Report a Bug</button>
                     <button class="btn btn-secondary btn-small" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-hashtag"></i> Social Media</button>
+                    
                 </div>
             </div>
         </section>
@@ -533,6 +539,8 @@ Click to find out more!">
         </section>
         <!--RESUME SECTION START-->
 
+        
+
         <% if (currentIssues.length != 0) { %>
             <section class="issues" id="issues">
 
@@ -661,6 +669,33 @@ Click to find out more!">
                                                     <div class="progress">
                                                         <div class="progress-bar" role="progressbar" data-percent="<%= element.options.percentile %>"
                                                             aria-valuenow="<%= element.options.percentile %>" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                        </div>
+                                    <% }) %>
+                                    
+                                   
+            
+                                    
+                                </div>
+                            </ul>
+                            
+                            
+                        </div>
+
+                        <div class="col-lg-6">
+                            <h3 class="mb-4"><i class="fa-solid fa-circle-nodes"></i> Technologies</h3>
+                            <ul class="list-inline resume-list">
+                                <div class="row mt-5">
+                                    <% technologies.forEach(element => { %>
+                                        <div class="col-lg-6">
+                                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
+                                                <div class="skill-progress flex-grow-1">
+                                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
+                                                        <span><%= element.name %> </span>
+                                                        <i style="color: rgb(227, 230, 255);" class="<%= element.options.fontawesome %> "></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -820,6 +855,28 @@ Click to find out more!">
             <button type="button" class="btn btn-warning" onclick="window.location.href='<%= socials.github %>'"><i class="fa-brands fa-github"></i> Github</button>
             <button type="button" class="btn btn-info" onclick="window.location.href='<%= socials.twitter %>'"><i class="fa-brands fa-twitter"></i> Twitter</button>
             <button type="button" class="btn btn-danger" onclick="window.location.href='<%= socials.reddit %>'"><i class="fa-brands fa-reddit"></i> Reddit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Social Modal -->
+
+  <!-- Start Social Modal -->
+<div class="modal fade" id="discordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: black;"><%= owner.username %> - Support Server </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="<%= serverWidget %>" alt="" href="<%= supportServer %> " >
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-warning" onclick="window.location.href='<%= supportServer %>'"><i class="fa-brands fa-discord"></i> Join</button>
+            
         </div>
       </div>
     </div>
