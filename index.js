@@ -36,6 +36,8 @@ app.get("/", async (req, res) => {
     const frameworksArray = [];
     const issuesArray = [];
     const pullRequestsArray = [];
+    const techArray = [];
+    const serverWidget = await discordClient.getServerWidget(`1014190469628055552`, "banner4");
 
     const projects = config.projects;
     const socials = config.profile.socials;
@@ -43,6 +45,7 @@ app.get("/", async (req, res) => {
     const frameworks = config.frameworks;
     const issues = await github.getIssues();
     const pullRequests = await github.getPullRequests();
+    const tech = config.technologies;
     
     const octokit = new Octokit({
       auth: `${config.owner.githubToken}`,
@@ -61,7 +64,8 @@ app.get("/", async (req, res) => {
 
     pullRequests.forEach((pullRequest) => {
       pullRequestsArray.push(pullRequest);
-    })
+    });
+
 
     
 
@@ -80,6 +84,10 @@ app.get("/", async (req, res) => {
 
     for (const framework in frameworks) {
       frameworksArray.push(frameworks[framework]);
+    }
+
+    for (const technology in tech) {
+      techArray.push(tech[technology]);
     }
     
 
@@ -103,9 +111,12 @@ app.get("/", async (req, res) => {
       repos: userData.public_repos,
       followers: userData.followers,
       frameworks: frameworksArray,
+      serverWidget: serverWidget,
+      technologies: techArray,
     });
   })
 })
+
 
 app.get("/error", (req, res) => {
   const error = req.query.err;
@@ -187,6 +198,9 @@ app.get("/status", (req, res) => {
 })
 
 
+app.get("/invite", (req, res) => {
+  res.redirect(`/redirect?url=${config.owner.supportServer}`)
+});
 
 
 
@@ -205,9 +219,13 @@ app.listen(port, () => {
   }
 
 
-  logger.info(`Server running at ${addresses}:${port}`);
 
-})
+  logger.log(`To View on your Machine go to: http://localhost:${port}`);
+  logger.log(`To View on your Network go to: http://${addresses[0]}:${port}`);
+
+});
+
+
 
 
 
