@@ -34,12 +34,15 @@ app.get("/", async (req, res) => {
     const projectsArray = [];
     const codingLanguagesArray = [];
     const frameworksArray = [];
+    const issuesArray = [];
+    const pullRequestsArray = [];
 
     const projects = config.projects;
     const socials = config.profile.socials;
     const codingLanguages = config.languages;
     const frameworks = config.frameworks;
-
+    const issues = await github.getIssues();
+    const pullRequests = await github.getPullRequests();
     
     const octokit = new Octokit({
       auth: `${config.owner.githubToken}`,
@@ -49,12 +52,15 @@ app.get("/", async (req, res) => {
     
     const userData = u.data;
 
-    const issues = await github.getIssues();
 
-    const issuesArray = [];
+    
 
     issues.forEach((issue) => {
       issuesArray.push(issue);
+    })
+
+    pullRequests.forEach((pullRequest) => {
+      pullRequestsArray.push(pullRequest);
     })
 
     
@@ -83,7 +89,7 @@ app.get("/", async (req, res) => {
       supportServer: config.owner.supportServer,
       projects: projectsArray,
       currentIssues: issuesArray,
-      issueLabels: issuesArray.find((issue) => issue.labels),
+      currentPullRequests: pullRequestsArray,
       codingLanguages: codingLanguagesArray,
       aboutMe: config.profile.aboutMe,
       languages: config.profile.languages,
@@ -99,8 +105,7 @@ app.get("/", async (req, res) => {
       frameworks: frameworksArray,
     });
   })
-});
-
+})
 
 app.get("/error", (req, res) => {
   const error = req.query.err;
