@@ -14,6 +14,8 @@ const config = require("./config");
 const port = process.env.PORT || config.webApp.port;
 const status = new Status(`${config.webApp.host}`);
 const { Octokit } = require("@octokit/core");
+const githubClient = require('./utils/githubClient');
+const github = new githubClient();
 
 
 
@@ -47,6 +49,14 @@ app.get("/", async (req, res) => {
     
     const userData = u.data;
 
+    const issues = await github.getIssues();
+
+    const issuesArray = [];
+
+    issues.forEach((issue) => {
+      issuesArray.push(issue);
+    })
+
     
 
 
@@ -65,13 +75,15 @@ app.get("/", async (req, res) => {
     for (const framework in frameworks) {
       frameworksArray.push(frameworks[framework]);
     }
-
+    
 
     const companyReal = userData.company.replace("@", "");
     res.render("index", {
       owner: owner,
       supportServer: config.owner.supportServer,
       projects: projectsArray,
+      currentIssues: issuesArray,
+      issueLabels: issuesArray.find((issue) => issue.labels),
       codingLanguages: codingLanguagesArray,
       aboutMe: config.profile.aboutMe,
       languages: config.profile.languages,
@@ -88,7 +100,6 @@ app.get("/", async (req, res) => {
     });
   })
 })
-
 
 app.post("/contact", (req, res) => {
   const name = req.body.name;
