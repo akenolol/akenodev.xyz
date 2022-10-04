@@ -533,38 +533,75 @@ Click to find out more!">
         </section>
         <!--RESUME SECTION START-->
 
-        <section class="issues" id="issues">
+        <% if (currentIssues.length != 0) { %>
+            <section class="issues" id="issues">
 
-            <div class="container d-flex flex-column justify-content-between h-100 ">
-
-                <div class="section-content flex-grow-1">
-                    <div class="row mt-4">
-                        <div class="col-lg-6">
-                            <h3 class="mb-4"><i class="fa-solid fa-bug"></i> Current Issues</h3>
-                            <ul class="list-inline resume-list">
-                                <% currentIssues.forEach(element => { %>
-                                    <li>
-                                        <h4 class="mb-2"><a href="https://github.com/akenolol/akenodev.xyz/issues/<%= element.number %> "><%= element.title %> </a>
-                                        </h4>
-                                        <span class="time">Issue Opened By: <%= element.user.login %> </span>
-                                        <p class="my-2">State: <%= element.state %>  </p>
-                                    </li>
-                                <% }) %>
-                                
-
-                            </ul>
+                <div class="container d-flex flex-column justify-content-between h-100 ">
+    
+                    <div class="section-content flex-grow-1">
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <h3 class="mb-4"><i class="fa-solid fa-bug"></i> Current Issues</h3>
+                                <ul class="list-inline resume-list">
+                                    <% currentIssues.forEach(element => { %>
+                                        <li>
+                                            <h4 class="mb-2"><a href="https://github.com/akenolol/akenodev.xyz/issues/<%= element.number %> "><%= element.title %> </a>
+                                            </h4>
+                                            <span class="time">Issue Opened By: <%= element.user.login %> </span>
+                                            <p class="my-2">State: <%= element.state %>  </p>
+                                        </li>
+                                    <% }) %>
+                                    
+    
+                                </ul>
+                            </div>
+    
+    
                         </div>
-
-
                     </div>
+    
                 </div>
+    
+            </section>
+        <% } %>
 
-            </div>
+        <% if (currentPullRequests.length != 0) { %>
+            <section class="pull" id="pull">
 
-        </section>
+                <div class="container d-flex flex-column justify-content-between h-100 ">
+    
+                    <div class="section-content flex-grow-1">
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <h3 class="mb-4"><i class="fa-solid fa-code-pull-request"></i> Pull Requests</h3>
+                                <ul class="list-inline resume-list">
+                                    <% currentPullRequests.forEach(element => { %>
+                                        <li>
+                                            <h4 class="mb-2"><a href="<%= element.url %> "><%= element.title %> </a>
+                                            </h4>
+                                            <span class="time">Issue Opened By: <%= element.user.login %> </span>
+                                            <p class="my-2">State: <%= element.state %>  </p>
+                                        </li>
+                                    <% }) %>
+                                    
+    
+                                </ul>
+                            </div>
+    
+    
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </section>
+        <% } %>
+
+
+        
         <!--RESUME SECTION START-->
 
-        <section>
+        <section class="skills" id="skills">
             <div class="container d-flex flex-column justify-content-between h-100 ">
 
                 <div class="section-title flex-grow-1">
@@ -789,7 +826,8 @@ Click to find out more!">
   </div>
   <!-- End Social Modal -->
 
-<noscript>
+
+  <noscript>
     <meta http-equiv="refresh" content="0; URL=/error?err=Please Enable Javascript for this Website!&code=505" />
 </noscript>
     <!--JS FILES-->
