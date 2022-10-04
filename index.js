@@ -99,6 +99,23 @@ app.get("/", async (req, res) => {
       frameworks: frameworksArray,
     });
   })
+});
+
+
+app.get("/error", (req, res) => {
+  const error = req.query.err;
+  const code = req.query.code;
+  if (error == null || error == "" || error == undefined) {
+    res.json({
+      error: "No error provided"
+    });
+  }
+  else {
+    res.render("error.ejs", {
+      error: error,
+      code: code,
+    })
+  }
 })
 
 app.post("/contact", (req, res) => {
