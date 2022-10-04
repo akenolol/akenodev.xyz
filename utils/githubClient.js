@@ -22,6 +22,14 @@ class githubClient {
         });
         return issues.data;
     }
+
+    async getPullRequests(){
+        const pullRequests = await this.octokit.request("GET /repos/{owner}/{repo}/pulls", {
+            owner: "akenolol",
+            repo: "akenodev.xyz",
+        });
+        return pullRequests.data;
+    }
 }
 
 module.exports = githubClient;
