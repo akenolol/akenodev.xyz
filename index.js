@@ -115,6 +115,11 @@ app.get("/", async (req, res) => {
       technologies: techArray,
     });
   })
+});
+
+
+app.get("/cv", async (req, res) => {
+  res.redirect("https://docs.google.com/document/d/1tBfrkcgccE9dBIJFmCLS3BvLUhQcinSa0wAaE_0cUn4/edit?usp=sharing")
 })
 
 
