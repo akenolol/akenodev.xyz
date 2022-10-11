@@ -1,5 +1,5 @@
 module.exports.webApp = {
-    port: 3000,
+    port: 4000,
     host: "https://akenodev.xyz",
     isOffline: false,
 },
@@ -248,7 +248,7 @@ module.exports.projects = {
 }
 
 module.exports.profile = {
-    aboutMe: ["Web Developer", "Discord / Telegram Bot Developer", "Discord Moderator", "Reddit Moderator", "Software Developer", "Anime Voice Actor"],
+    aboutMe: ["Voice Actor", "Web Developer", "Discord / Telegram Bot Developer", "Discord Moderator", "Reddit Moderator", "Software Developer", "Anime Voice Actor"],
     socials: {
         github: "https://github.com/akenolol",
         twitter: "https://twitter.com/akeno_dev",
