@@ -1,934 +1,653 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-    <!--Useful meta tags-->
-    <meta name="robots" content="index, follow, noodp" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="google" content="notranslate" />
-    <meta charset="UTF-8" />
-    <meta name="description" content="<%= owner.username %> is a Software Developer and is only 16!
-Click to find out more!">
-<meta property="og:title" content="<%= owner.username %>">
-    <meta property="og:description" content="<%= owner.username %> is a Software Developer and is only 16!
-Click to find out more!">
-    <meta property="og:image" content="https://cdn.discordapp.com/avatars/<%= owner.id %>/<%= owner.avatar %>.gif?size=1024">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!--Preloader JS-->
-    <script type="text/javascript" src="./assets/js/preloader.js"></script>
-    <!--Preloader Style-->
-    <link rel="stylesheet" href="./assets/css/preload.css">
-    
-    <!--Bootstrap Stylesheet-->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" as="style"
-        onload="this.rel='stylesheet';this.removeAttribute('onload');">
-    <!--Magnific Popup Stylesheet-->
-    <link rel="stylesheet" href="./assets/css/magnific-popup.css" as="style"
-        onload="this.rel='stylesheet';this.removeAttribute('onload');">
-    <!--OWL Carousel Stylesheet-->
-    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" as="style"
-        onload="this.rel='stylesheet';this.removeAttribute('onload');">
-    <!--Font Awesome Stylesheet-->
-    <link rel="stylesheet" href="./assets/css/all.min.css" as="style"
-        onload="this.rel='stylesheet';this.removeAttribute('onload');">
-    <!--Mobirise-->
-    <link rel="stylesheet" href="./assets/css/mobirise/style.css" as="style"
-        onload="this.rel='stylesheet';this.removeAttribute('onload');">
-    <!--AOC-->
-    <link rel="stylesheet" href="./assets/css/aos.css" as="style"
-        onload="this.rel='stylesheet';this.removeAttribute('onload');">
-    <!--Main Stylesheet-->
-    <link rel="stylesheet" href="./assets/css/main.css" as="style"
-        onload="this.rel='stylesheet';this.removeAttribute('onload');">
-    <!--Responsive Stylesheet-->
-    <link rel="stylesheet" href="./assets/css/responsive.css" as="style"
-        onload="this.rel='stylesheet';this.removeAttribute('onload');">
-    <!--Theme Stylesheet-->
-    <link rel="stylesheet" href="./assets/css/dark.theme.css" id="optional-theme" />
-    <!--Theme Color-->
-    <link rel="stylesheet" href="./assets/css/default.css" id="optional-color" />
-    <!--MAIN TITLE-->
-    <title>Akeno Dev :: Home</title>
-
-
-    <!-- Custom Cursor CSS -->
-
-    <style>
-        /* Make the cursor ./assets/cursors/cursor.cur */
-        /* * {
-            cursor: url(./assets/cursors/cursor.cur), auto;
-        } */
-    </style>
-
-
+  <!-- Required meta tags-->
+  <meta charset="utf-8">
+  <!-- Title-->
+  <title><%= owner.username %> - Home </title>
+  <!-- Description-->
+  <meta name="description" content="Personal Portfolio Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="img/avatar.png">
+  <!-- Web fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap" rel="stylesheet">
+  <!-- CSS vendors-->
+  <link rel="stylesheet" href="assets/css/bootstrap-custom.css">
+  <link rel="stylesheet" href="assets/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/tiny-slider.css">
+  <link rel="stylesheet" href="assets/css/lity.min.css">
+  <link rel="stylesheet" href="assets/css/simplebar.min.css">
+  <link rel="stylesheet" href="assets/css/jquery.mb.YTPlayer.min.css">
+  <!-- Main CSS-->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- CSS Color scheme-->
+  <link id="color-scheme" rel="stylesheet" href="assets/css/colors/main-darkgreen.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Bootstrap CSS -->
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
-<body data-spy="scroll" data-target=".scrollspy" data-offset="85">
-    <!--PRELOADER START-->
-    <div id="preloader">
-        <div class="text-center w-100">
-            <div class="loader"></div>
-        </div>
+<body class="theme-dark">
+  <!-- Preloader-->
+  <div class="preloader">
+    <div class="preloader-block">
+      <div class="preloader-icon"><span class="loading-dot loading-dot-1"></span><span class="loading-dot loading-dot-2"></span><span class="loading-dot loading-dot-3"></span></div>
     </div>
-    <!--PRELOADER END-->
-    <!--HEADER START-->
-    <header class="navigation horizontal_header transparentOnScroll navbar navbar-expand-lg fixed-top">
-        <div class="header-ins">
-            <div class="container">
-                <!--LOGO AREA-->
-                <div class="site-logo">
-                    <a href="#" class="hoveroff">
-                       Akeno<span>Dev</span>
-                    </a>
-                </div>
-                <button class="button-toggler navbar-toggler collapsed" type="button" data-target="#navigation"
-                    data-toggle="collapse" aria-controls="navigation" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <!--Main Navigation START-->
-                <ul class="justify-content-end scrollspy collapse navbar-collapse" id="navigation">
-                    <li>
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li>
-                        <a href="#service" class="nav-link">Services</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="nav-link">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#resume" class="nav-link">Resume</a>
-                    </li>
-
-                    <li>
-                        <a href="#skills" class="nav-link">Skills</a>
-                    </li>
-
-                    <li>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#discordModal">Join
-                            Discord</button>
-                    </li>
-                </ul>
-                <!--Main Navigation END-->
-
-            </div>
+  </div>
+  <div id="overlay-effect"></div>
+  <!-- Navbar-->
+  <nav class="navbar-expand-md navbar fixed-top" id="navbar"><a class="navbar-bots" data-scroll="" href="#home-area">
+      <!-- Navbar Logo-->
+      <img class="img-fluid invisableImage" src="https://cdn.discordapp.com/attachments/981632133191843852/1030952155181498459/trans.png"></a>
+    <span class="navbar-menu ml-auto" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" role="button"><span class="btn-line"></span></span>
+    <div class="collapse navbar-collapse order-1 order-lg-0" id="navbarSupportedContent">
+      <!-- Navbar menu-->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
+        <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+      </ul>
+    </div>
+  </nav>
+  <!-- Home-->
+  <section class="home-area element-cover-bg video-variant" id="home" style="background-image:url(assets/img/home.jpg)">
+    <div class="player" id="homeVideo" data-property="{videoURL:'https://youtu.be/UKRYHQALlAI',containment:'#home',autoPlay:true, mute:false, showControls:false, stopMovieOnBlur:false, showYTLogo: false}"></div>
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-12 col-lg-8 home-content text-center">
+          <h1 class="home-name"><%= owner.username %> </h1>
+          <h4 class="cd-headline clip home-headline">I’m a <span class="cd-words-wrapper single-headline"><b class="is-visible">Web Developer</b><b>Voice Actor</b><b>Bot Developer</b><b>Software Developer</b><b>Moderator</b></span></h4>
         </div>
-
-    </header>
-    <!--HEADER END-->
-
-    <main class="content center-main">
-        <!--INTRODUCTION SECTION START-->
-        <section class="home d-flex" id="home">
-            <!--Parallax Background-->
-            <div class="background-parallax" id="parallaxbackground">
-                <div class="element1 element red" data-depth="0.8"></div>
-                <div class="element2 element green" data-depth="0.5"></div>
-                <div class="element3 element blue" data-depth="0.2"></div>
-                <div class="element4 element red" data-depth="0.4"></div>
-                <div class="element5 element orange" data-depth="0.3"></div>
-                <div class="element6 element blue" data-depth="0.2"></div>
+      </div>
+    </div>
+    <div class="fixed-wrapper">
+      <!-- Languages list COMING SOON!-->
+      <!-- <div class="fixed-block block-left">
+        <ul class="list-unstyled languages-list">
+          <li><a href="#0"><span class="single-language">ENG</span></a></li>
+          <li><a href="#0"><span class="single-language">JAP</span></a></li>
+        </ul>
+      </div> -->
+      <!-- Social media icons-->
+      <div class="fixed-block block-right">
+        <ul class="list-unstyled social-icons">
+          <li><a href="https://twitter.com/akeno_dev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg></a></li>
+          <li><a href="https://github.com/akenolol"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg></a></li>
+          <li><a href="<%= supportServer %> "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+          </svg></a></li>
+          <li><a href="https://www.twitch.tv/akenodevlol"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+            <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+            <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+          </svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- About lightbox-->
+  <div class="lightbox-wrapper" id="about" data-simplebar>
+    <div class="container">
+      <div class="lightbox-close">
+        <div class="close-btn" data-modal-close=""><span class="btn-line"></span></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="lightbox-content">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-heading page-heading">
+                  <h2 class="section-title">About Me</h2>
+                  <div class="animated-bar"></div>
+                </div>
+              </div>
             </div>
-            <!--End of Parallax Background-->
-            <div class="container introduction text-center">
-                <p class="welcome_text mb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150">I'm a
-                    <span class="welcome-text-type"
-                        data-options="<%= aboutMe %> "></span>
-                </p>
-                <div id="parallax-scene" class="mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
-                    <div class="heading-zone">
-                        <h1>
-                            <%= owner.username %>
-                        </h1>
+            <!-- Info section-->
+            <div class="info-section single-section">
+              <div class="row align-items-center">
+                <!-- Picture part-->
+                <% if (owner.avatar.includes("a_")) { %>
+                    <div class="col-12 col-lg-5 info-img"><img class="img-fluid img-thumbnail" src="https://cdn.discordapp.com/avatars/<%= owner.id %>/<%= owner.avatar %>.gif?size=1024" alt="About Picture"></div>
+                <% } %>
+                <% if (!owner.avatar.includes("a_")) { %>
+                    <div class="col-12 col-lg-5 info-img"><img class="img-fluid img-thumbnail" src="https://cdn.discordapp.com/avatars/<%= owner.id %>/<%= owner.avatar %>.png?size=1024" alt="About Picture"></div>
+                <% } %>
+                <!-- Content part-->
+                <div class="col-12 col-lg-7 info-content">
+                  <div class="content-block">
+                    <h2 class="content-subtitle">Who am i?</h2>
+                    <h6 class="content-title">I'm <%= owner.username %> , a Web Developer, Voice Actor, Discord Bot Developer, Moderator, Software Developer</h6>
+                    <div class="content-description" style="color:white">
+                      <p>I am a freelancer based in the United States and i have been building noteworthy Websites / Discord Bots / Applications for <strong>3</strong> Years!
+                    </p>
                     </div>
+                    <address class="content-info">
+                      <div class="row">
+                        <div class="col-12 col-md-6 single-info"><span>Name:</span>
+                          <p style="color:white"><%= owner.username %> (HAYDEN) </p>
+                        </div>
+                        <div class="col-12 col-md-6 single-info"><span>Email:</span>
+                          <p class="sensitveData" style="color:white"><a href="mailto:owner@akenodev.xyz">owner@akenodev.xyz</a></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-md-6 single-info"><span>Age:</span>
+                          <p style="color:white">16</p>
+                        </div>
+                        <div class="col-12 col-md-6 single-info"><span>From:</span>
+                          <p class="sensitveData" style="color:white">Waycross, Ga</p>
+                        </div>
+                      </div>
+                    </address>
+                    <div class="d-block d-sm-flex align-items-center"><a class="btn content-download button-main button-scheme" href="/cv" role="button">CV</a>
+                      <ul class="list-unstyled list-inline content-follow">
+                        <li class="list-inline-item"><a href="https://twitter.com/akeno_dev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                          </svg></a></li>
+                          <li class="list-inline-item"><a href="https://github.com/akenolol"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                          </svg></a></li>
+                          <li class="list-inline-item"><a href="<%= supportServer %> "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                          </svg></a></li>
+                          <li class="list-inline-item"><a href="https://www.twitch.tv/akenodevlol"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                            <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                            <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                          </svg></a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="450">
-                    <a href="#about" class="btn  btn-primary btn-small"><i class="fa-solid fa-file"></i> Learn More</a>
-                    <button class="btn  btn-primary btn-small" onclick="window.location.href='/cv'" > <i class="fa-solid fa-file"></i> CV / RESUME</button>
-                    <button class="btn btn-secondary btn-small" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-hashtag"></i> Social Media</button>
-                    
-                </div>
+              </div>
             </div>
-        </section>
-        <!--INTRODUCTION SECTION END-->
-
-
-        <!--ABOUT SECTION START-->
-        <section class="about" id="about">
-            <div class="container d-flex justify-content-between flex-column h-100">
-                <div class="section-title flex-grow-1">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <h2 data-aos="heading-show" class="rect_heading">Who Am I</h2>
-                                <p class="m-0">Get to know me</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Services section-->
+            <div class="services-section single-section">
+              <div class="row">
+                <div class="col-12">
+                  <div class="section-heading">
+                    <h2 class="section-title">My Services</h2>
+                  </div>
                 </div>
-                <div class="section-content flex-grow-1">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-6">
-                            <div class="avatar-area m-auto"
-                            style="width: 450; height: 450;  border-radius: 50%;">
-                            
-                                <% if (owner.avatar.includes("a_")) { %>
-                                    <img src="https://cdn.discordapp.com/avatars/<%= owner.id %>/<%= owner.avatar %>.gif?size=1024"
-                                        width="400" height="550" alt="" class="img-fluid mx-auto">
-                                    <% } %>
-                                        <% if (!owner.avatar.includes("a_")) { %>
-                                            <img src="https://cdn.discordapp.com/avatars/<%= owner.id %>/<%= owner.avatar %>.png?size=1024"
-                                                width="400" height="550" alt="" class="img-fluid mx-auto">
-                                            <% } %>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mt-5 mt-md-0">
-                            <h3 class="m-0">I'm <%= owner.username %> 👋</h3>
-                            <p class="my-4">
-                                <%= bio %>
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    
-                                    <div class="about-info mb-2">
-                                        <i class="fa-solid fa-id-card"></i>
-                                        <span class="desc">Name:</span>
-                                        <span>Hayden (<%= owner.username %>) </span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="about-info mb-2">
-                                        <i class="fa-brands fa-pagelines"></i>
-                                        <span class="desc">Age:</span>
-                                        <span>16 Years Old</span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="about-info mb-2">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <span class="desc">Location:</span>
-                                        <span>
-                                            <%= location %>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="about-info mb-2">
-                                        <i class="fa-solid fa-user"></i>
-                                        <span class="desc">Languages:</span>
-                                        <span>
-                                            <%= languages %>
-                                        </span>
-                                    </div>
-                                </div>
-                               
-                                <div class="col-lg-6">
-                                    <div class="about-info mb-2">
-                                        <i class="fa-solid fa-briefcase"></i>
-                                        <span class="desc">Looking for Jobs:</span>
-                                        <% if (isHireable===true) { %>
-                                            <span><a href="https://github.com/akenolol" class="__cf_email__"
-                                                    data-cfemail="93f8f6e5fafdfefafffff6e1d3f8fff1bdf0fcfe">Yes</a></span>
-                                            <% } %>
-                                                <% if (isHireable===false) { %>
-                                                    <span><a href="https://github.com/akenolol" class="__cf_email__"
-                                                            data-cfemail="93f8f6e5fafdfefafffff6e1d3f8fff1bdf0fcfe">No</a></span>
-                                                    <% } %>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="about-info mb-2">
-                                        <i class="fa-solid fa-tag"></i>
-                                        <span class="desc">Company:</span>
-                                        <span><a href="https://github.com/<%= companyReal %>">
-                                                <%= company %>
-                                            </a></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="about-info mb-2">
-                                        <i class="fa-brands fa-discord"></i>
-                                        <span class="desc"> Discord Server: </span>
-                                        <span><a href="<%= supportServer %> ">
-                                                discord.gg/
-                                            </a></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="about-info mb-2">
-                                        <i class="fa-brands fa-twitter"></i>
-                                        <span class="desc"> Twitter:</span>
-                                        <span><a href="<%= socials.twitter %>">@akeno_dev</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="row">
+                <!-- Single service-->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="single-service">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+                        <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
+                        <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"/>
+                      </svg>
+                    <h6 class="service-title">Discord Bot</h6>
+                    <p class="service-description" style="color:white">
+                        I can make a discord bot for you, I can make it do anything you want, I can make it do moderation, fun commands, music, and more!
+                    </p>
+                  </div>
                 </div>
-
+                <!-- Single service-->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="single-service">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-hdd-fill" viewBox="0 0 16 16">
+                        <path d="M0 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-1zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM.91 7.204A2.993 2.993 0 0 1 2 7h12c.384 0 .752.072 1.09.204l-1.867-3.422A1.5 1.5 0 0 0 11.906 3H4.094a1.5 1.5 0 0 0-1.317.782L.91 7.204z"/>
+                      </svg>
+                    <h6 class="service-title">Website Development</h6>
+                    <p class="service-description" style="color:white">
+                        I can make a website for you, Ecommerce, Blog, Portfolio, and more!
+                    </p>
+                  </div>
+                </div>
+                <!-- Single service-->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="single-service">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-shield-fill" viewBox="0 0 16 16">
+                        <path d="M5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                      </svg>
+                    <h6 class="service-title">Moderation</h6>
+                    <p class="service-description" style="color:white">
+                        I can moderate your server, I can do anything you want me to do, I can do anything from managing events to enforcing rules.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-        <!--ABOUT SECTION END-->
-
-        <!--FACTS SECTION START-->
-        <div class="section facts backgound-section"
-            style="background-image: url(https://cdn.discordapp.com/attachments/981632133191843852/1025131890832834591/unknown.png)"
-            data-aos-id="facts">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6 mt-3 mt-lg-0">
-                        <div class="fact-single text-center">
-                            <div class="fact-icon">
-                                <span class="mbri-timer"></span>
-                            </div>
-                            <div class="fact-info">
-                                <span class="tmcounter" data-from="0" data-to="<%= followers %> " data-speed="1500">
-                                    <%= followers %>
-                                </span>
-                            </div>
-                            <div class="fact-meta">
-                                <span>Followers</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 mt-3 mt-lg-0">
-                        <div class="fact-single text-center">
-                            <div class="fact-icon">
-                                <span class="mbri-smile-face"></span>
-                            </div>
-                            <div class="fact-info">
-                                <span class="tmcounter" data-from="0" data-to="<%= repos %>" data-speed="1500">
-                                    <%= repos %>
-                                </span>
-                            </div>
-                            <div class="fact-meta">
-                                <span>Repos</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 mt-3 mt-lg-0">
-                        <div class="fact-single text-center">
-                            <div class="fact-icon">
-                                <span class="mbri-magic-stick"></span>
-                            </div>
-                            <div class="fact-info">
-                                <span class="tmcounter" data-from="0" data-to="50" data-speed="1500">50</span>
-                            </div>
-                            <div class="fact-meta">
-                                <span>Projects Done</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 mt-3 mt-lg-0">
-                        <div class="fact-single text-center">
-                            <div class="fact-icon">
-                                <span class="mbri-save"></span>
-                            </div>
-                            <div class="fact-info">
-                                <span class="tmcounter" data-from="0" data-to="60" data-speed="1500">60</span>
-                            </div>
-                            <div class="fact-meta">
-                                <span>Discord / Telegram Bots Completed</span>
-                            </div>
-                        </div>
-                    </div>
-
+            <!-- Testimonials section-->
+            <!-- <div class="testimonials-section single-section">
+              <div class="row">
+                <div class="col-12">
+                  <div class="section-heading">
+                    <h2 class="section-title">Testimonials</h2>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <!--FACTS SECTION END-->
-
-        <!--SERVICES SECTION START-->
-        <section class="services" id="service">
-            <div class="container d-flex flex-column justify-content-between h-100 ">
-
-                <div class="section-title flex-grow-1">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <h2 data-aos="heading-show" class="rect_heading">What I Do</h2>
-                                <p class="m-0">Here is what i do!</p>
-                            </div>
+              </div>
+              <div class="my-slider">
+                <div class="slider-item">
+                  <div class="single-review swiper-slide">
+                    <div class="review-header d-flex justify-content-between">
+                      <div class="review-client">
+                        <div class="media"><img class="img-fluid rounded-circle client-avatar" src="assets/img/client_1.png" alt="LMAY">
+                          <div class="client-details">
+                            <h6 class="client-name">Lmay</h6><span class="client-role">Discord Server Member</span>
+                          </div>
                         </div>
+                      </div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                      </svg></i>
                     </div>
+                    <p class="review-content" style="color:white">Great Discord Bots, and Websites! Highly recommended.</p>
+                  </div>
                 </div>
-
-                <div class="section-content flex-grow-1">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mt-4 mb-2">
-                            <div class="service-single text-center p-5">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-code-branch"></i>
-                                </div>
-                                <h3 class="my-3">Development</h3>
-                                <p>I Create <strong>GAMES</strong>, <strong>APPS</strong>, <strong>WEBSITES</strong>,
-                                    and <strong>BOTS</strong>.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-4 mb-2">
-                            <div class="service-single text-center p-5">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-shield"></i>
-                                </div>
-                                <h3 class="my-3">Responsive</h3>
-                                <p>I Create Quick, Easy, and Amazing Projects.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-4 mb-2">
-                            <div class="service-single text-center p-5">
-                                <div class="service-icon">
-                                    <i class="fa-solid fa-robot"></i>
-                                </div>
-                                <h3 class="my-3">Bot Development</h3>
-                                <p>In My Spare Time I also create <a href="https://discord.com">Discord</a> Bots!</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!--SERVICE SECTION START-->
-
-        
-
-        <!--PORTFOLIO SECTION START-->
-        <section class="portfolio" id="portfolio">
-            <div class="container d-flex flex-column justify-content-between h-100 ">
-
-                <div class="section-title flex-grow-1">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <h2 data-aos="heading-show" class="rect_heading">My Projects</h2>
-                                <p class="m-0">There are currently <%= repos %>, projects I have on my <a
-                                            href="https://github.com/akenolol">Github!</a> </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-content flex-grow-1">
-                    <div class="row portfolio-items">
-
-                        <% projects.forEach(element=> { %>
-                            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-                                <div class="portfolio-item">
-                                    <a href="<%= element.url %> " class="portfolio-single">
-                                        <div class="item-box">
-                                            <div class="item-image">
-                                                <img src="<%= element.image %>" width="350" height="410"
-                                                    class="d-block img-fluid mx-auto" alt="">
-                                            </div>
-                                            <div class="item-details d-flex align-items-center">
-                                                <div class="item-details-ins text-center w-100">
-                                                    <div class="mb-2">
-                                                        <span class="mbri-photos"></span>
-                                                    </div>
-                                                    <h3>
-                                                        <%= element.name %>
-                                                    </h3>
-                                                    <p>
-                                                        <%= element.description %>
-                                                    </p>
-                                                    <p>
-                                                        <%= element.language %>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            
-                            <% }) %>
-
-
-
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center mt-5">
-                            <a href="https://github.com/akenolol" class="btn btn-outline-primary"><span></span><i class="fa-solid fa-link"></i> See
-                                More</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!--PORTFOLIO SECTION START-->
-
-
-
-
-        <!--RESUME SECTION START-->
-        <section class="resume" id="resume">
-
-            <div class="container d-flex flex-column justify-content-between h-100 ">
-
-                <div class="section-title flex-grow-1">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <h2 data-aos="heading-show" class="rect_heading">My Experience</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-content flex-grow-1">
-                    <div class="row mt-4">
-                        <div class="col-lg-6">
-                            <h3 class="mb-4"><i class="fa-solid fa-school"></i> Education</h3>
-                            <ul class="list-inline resume-list">
-                                <li>
-                                    <h4 class="mb-2"><a href="https://www.pennfoster.edu/">Penn Foster</a></h4>
-                                    <span class="time">2021 - Present</span>
-                                    <p class="my-2">Currently enrolled here :)</p>
-                                </li>
-                                <li>
-                                    <h4 class="mb-2"><a href="http://www.ware.k12.ga.us/">Ware County High School</a>
-                                    </h4>
-                                    <span class="time">2021 - 2021</span>
-                                    <p class="my-2">I was enrolled by default, but unenrolled.</p>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <h3 class="mb-4"><i class="fa-solid fa-tags"></i> Experience</h3>
-                            <ul class="list-inline resume-list">
-                                <li>
-                                    <h4 class="mb-2">Bot Developer</h4>
-                                    <span class="time">2019 - Present</span>
-                                    <p class="my-2">
-                                        I Spent <strong>MOST</strong> of my time working on
-                                        <a href="https://discord.com">Discord</a>
-                                        Bots.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4 class="mb-2">Software Developer</h4>
-                                    <span class="time">2019 - Present</span>
-                                    <p class="my-2">
-                                        I have been working on Software Development for a while now, and I have been
-                                        learning a lot!
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-        <!--RESUME SECTION START-->
-
-        
-
-        <% if (currentIssues.length != 0) { %>
-            <section class="issues" id="issues">
-
-                <div class="container d-flex flex-column justify-content-between h-100 ">
-    
-                    <div class="section-content flex-grow-1">
-                        <div class="row mt-4">
-                            <div class="col-lg-6">
-                                <h3 class="mb-4"><i class="fa-solid fa-bug"></i> Current Issues</h3>
-                                <ul class="list-inline resume-list">
-                                    <% currentIssues.forEach(element => { %>
-                                        <li>
-                                            <h4 class="mb-2"><a href="https://github.com/akenolol/akenodev.xyz/issues/<%= element.number %> "><%= element.title %> </a>
-                                            </h4>
-                                            <span class="time">Issue Opened By: <%= element.user.login %> </span>
-                                            <p class="my-2">State: <%= element.state %>  </p>
-                                        </li>
-                                    <% }) %>
-                                    
-    
-                                </ul>
-                            </div>
-    
-    
-                        </div>
-                    </div>
-    
-                </div>
-    
-            </section>
-        <% } %>
-
-        <% if (currentPullRequests.length != 0) { %>
-            <section class="pull" id="pull">
-
-                <div class="container d-flex flex-column justify-content-between h-100 ">
-    
-                    <div class="section-content flex-grow-1">
-                        <div class="row mt-4">
-                            <div class="col-lg-6">
-                                <h3 class="mb-4"><i class="fa-solid fa-code-pull-request"></i> Pull Requests</h3>
-                                <ul class="list-inline resume-list">
-                                    <% currentPullRequests.forEach(element => { %>
-                                        <li>
-                                            <h4 class="mb-2"><a href="<%= element.url %> "><%= element.title %> </a>
-                                            </h4>
-                                            <span class="time">Issue Opened By: <%= element.user.login %> </span>
-                                            <p class="my-2">State: <%= element.state %>  </p>
-                                        </li>
-                                    <% }) %>
-                                    
-    
-                                </ul>
-                            </div>
-    
-    
-                        </div>
-                    </div>
-    
-                </div>
-    
-            </section>
-        <% } %>
-
- <section class="tweets" id="tweets">
-            <div class="container d-flex flex-column justify-content-between h-100 ">
-                <div class="section-content flex-grow-1">
-                    <div class="row mt-4">
-                        <div class="col-lg-6">
-                            <h3 class="mb-4"><i class="fa-solid fa-hashtag"></i> Pinned Tweet</h3>
-                            <ul class="list-inline resume-list">
-                                <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">ok, imma come out and say it....<br><br>i want to be dominated by a cute UwU egirl, while she chokes me, and makes me call her mommy~</p>&mdash; The Guy Who Is At Every Party (@akeno_dev) <a href="https://twitter.com/akeno_dev/status/1577788707494678529?ref_src=twsrc%5Etfw">October 5, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-            </section>
-        
-        <!--RESUME SECTION START-->
-
-        <section class="skills" id="skills">
-            <div class="container d-flex flex-column justify-content-between h-100 ">
-
-                <div class="section-title flex-grow-1">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <h2 data-aos="heading-show" class="rect_heading">My Skills</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-content flex-grow-1">
-                    <div class="row mt-4">
-                        <div class="col-lg-6">
-                            <h3 class="mb-4"><i class="fa-solid fa-file-code"></i></i> Programming Languages</h3>
-                            <ul class="list-inline resume-list">
-                                <div class="row mt-5">
-                                    <% codingLanguages.forEach(element => { %>
-                                        <div class="col-lg-6">
-                                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                                                <div class="skill-progress flex-grow-1">
-                                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                                                        <span><%= element.name %> </span>
-                                                        <span class="text-right progress-percent"><%= element.options.percentile %>%</span>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" data-percent="<%= element.options.percentile %>"
-                                                            aria-valuenow="<%= element.options.percentile %>" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
                 
-                                        </div>
-                                    <% }) %>
-                                    
-                                   
-            
-                                    
-                                </div>
-                            </ul>
-                            
-                            
-                        </div>
-                        <div class="col-lg-6">
-                            <h3 class="mb-4"><i class="fa-solid fa-box-archive"></i> Programming Frameworks</h3>
-                            <ul class="list-inline resume-list">
-                                <div class="row mt-5">
-                                    <% frameworks.forEach(element => { %>
-                                        <div class="col-lg-6">
-                                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                                                <div class="skill-progress flex-grow-1">
-                                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                                                        <span><%= element.name %> </span>
-                                                        <span class="text-right progress-percent"><%= element.options.percentile %>%</span>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" data-percent="<%= element.options.percentile %>"
-                                                            aria-valuenow="<%= element.options.percentile %>" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                
-                                        </div>
-                                    <% }) %>
-                                    
-                                   
-            
-                                    
-                                </div>
-                            </ul>
-                            
-                            
-                        </div>
-
-                        <div class="col-lg-6">
-                            <h3 class="mb-4"><i class="fa-solid fa-circle-nodes"></i> Technologies</h3>
-                            <ul class="list-inline resume-list">
-                                <div class="row mt-5">
-                                    <% technologies.forEach(element => { %>
-                                        <div class="col-lg-6">
-                                            <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                                                <div class="skill-progress flex-grow-1">
-                                                    <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                                                        <span><%= element.name %> </span>
-                                                        <i style="color: rgb(227, 230, 255);" class="<%= element.options.fontawesome %> "></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                
-                                        </div>
-                                    <% }) %>
-                                    
-                                   
-            
-                                    
-                                </div>
-                            </ul>
-                            
-                            
-                        </div>
-        </section>
-
-
-
-
-
-
-        <!--CONTACT SECTION START-->
-        <section class="contact" id="contact">
-            <div class="container d-flex flex-column justify-content-between h-100 ">
-                <div class="section-title flex-grow-1">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <h2 data-aos="heading-show" class="rect_heading">Get in Touch</h2>
-                                <p class="m-0">Contact Me!</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="section-content flex-grow-1">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div
-                                class="d-flex flex-row flex-sm-column flex-md-row justify-content-md-center mb-3 text-left text-sm-center text-md-left">
-                                <div class="contact-icon mr-md-3 mr-3 mr-sm-0">
-                                    <span class="mbri-letter"></span>
-                                </div>
-                                <div class="contact-details mt-2">
-                                    <h5>Email Me</h5>
-                                    <p><a href="mailto:owner@akenodev.xyz"><span class="__cf_email__"
-                                                data-cfemail="c8a3adbea1a6a5a1a4a4adba88a9a4aae6aba7a5">owner@akenodev.xyz</span></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div
-                                class="d-flex flex-row flex-sm-column flex-md-row justify-content-md-center mb-3 text-left text-sm-center text-md-left">
-                                <div class="contact-icon mr-md-3 mr-3 mr-sm-0">
-                                    <span class="mbri-mobile"></span>
-                                </div>
-                                <div class="contact-details mt-2">
-                                    <h5>Join the Server</h5>
-                                    <p><a href="<%= supportServer %>">discord.gg/</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mt-5">
-                            <div class="col-lg-12">
-                                <form action="/contact" method="post">
-                                    <div class="row">
-                                        <div class="col-lg-6 mt-3">
-                                            <div class="form-group">
-                                                <input type="text" name="name" id="name" class="form-control" autocomplete="off" required>
-                                                <label>Full Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 mt-3">
-                                            <div class="form-group">
-                                                <input type="email" name="email" id="email" class="form-control" autocomplete="off" required>
-                                                <label>Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mt-3">
-                                            <div class="form-group">
-                                                <input type="text" name="subject" id="subject" class="form-control" autocomplete="off" required>
-                                                <label>Subject</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mt-3">
-                                            <div class="form-group">
-                                                <textarea name="text" id="text" rows="6" class="form-control" required></textarea>
-                                                <label>Message</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mt-3">
-                                            <div class="form-group mb-0 text-right">
-                                                <button type="submit" id="contact-btn" class="btn btn-outline-primary btn-bg">
-                                                    Send Message
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-      
-                    </div>
-
-
-
-
-
-                    </div>
-        </section>
-        <!-- /CONTACT SECTION END-->
-        <footer class="horizontal-footer shadow-footer">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-12">
-                        <div class="text-center">
-                            <p class="copyright-text mt-3 mb-5">Made with <i class="fa fa-heart"></i> by <a href="<%= socials.github %>"><%= owner.username %> / Hayden</a> ||
-                                <i class="fa-solid fa-star"></i>
-                                <a href="https://github.com/akenolol/akenodev.xyz">on Github</a>
-                            </p>
-                            
-                            
-                        </div>
-                    </div>
+              </div>
+            </div> -->
+            <!-- Pricing section-->
+            <div class="pricing-section single-section">
+              <div class="row">
+                <div class="col-12">
+                  <div class="section-heading">
+                    <h2 class="section-title">Choose a Plan</h2>
+                  </div>
                 </div>
+              </div>
+              <div class="row align-items-center">
+                <!-- Single plan-->
+                <div class="col-lg-4">
+                  <div class="single-plan mb-4 mb-sm-5"><i class="fa-solid fa-laptop-code publicPath"></i></i>
+                    <h3 class="plan-type">Discord Bot</h3>
+                    <h2 class="plan-price">$10</h2>
+                    <ul class="list-unstyled plan-list">
+                      <li style="color:white">Mod Commands</li>
+                      <li style="color:white">Giveaway Commands</li>
+                      <li style="color:white">Leveling System ( + $5 )</li>
+                      <li style="color:white">Dashboard ( + $15 )</li>
+                    </ul><!-- <a class="btn button-main button-scheme plan-btn" data-bs-toggle="modal" data-bs-target="#redriectPopup" role="button">Get "<strong>Discord Bot</strong>"</a> -->
+
+                    <button type="button" class="btn button-main button-scheme plan-btn" onclick="redirect('<%= supportServer %>')">Get "<strong>Discord Bot</strong>"</button>
+                  </div>
+                </div>
+                <!-- Single plan-->
+                <div class="col-lg-4">
+                  <div class="single-plan mb-4 mb-sm-5"><i class="fa-solid fa-network-wired publicPath"></i></i>
+                    <h3 class="plan-type">Website</h3>
+                    <h2 class="plan-price">$20</h2>
+                    <ul class="list-unstyled plan-list">
+                      <li style="color:white">Api ( + $5 )</li>
+                      <li style="color:white">Responsive Design ( + $7 )</li>
+                      <li style="color:white">Databases ( + $3 )</li>
+                      <li style="color:white">Discord / Twitch / Twitter / Instagram / Youtube Integration ( + $10 )</li>
+                      <li style="color:white">24/7 Support</li>
+                    </ul><button type="button" class="btn button-main button-scheme plan-btn" onclick="redirect('<%= supportServer %>')">Get "<strong>Websitet</strong>"</button>
+                  </div>
+                </div>
+              </div>
             </div>
-
-
-
-        </footer>
-
-    </main>
-
-    <!--To Top Link START-->
-    <a href="#" class="toTop" id="return-to-top">
-        <i class="fa-solid fa-angle-up"></i>
-    </a>
-    <!--To Top Link END-->
-
-    <!-- Start Social Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel" style="color: black;"><%= owner.username %> - Social Media </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Click on a social media icon to open it in a new tab.
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-warning" onclick="window.location.href='<%= socials.github %>'"><i class="fa-brands fa-github"></i> Github</button>
-            <button type="button" class="btn btn-info" onclick="window.location.href='<%= socials.twitter %>'"><i class="fa-brands fa-twitter"></i> Twitter</button>
-            <button type="button" class="btn btn-danger" onclick="window.location.href='<%= socials.reddit %>'"><i class="fa-brands fa-reddit"></i> Reddit</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- End Social Modal -->
+  <!-- Resume lightbox-->
+  <div class="lightbox-wrapper" id="resume" data-simplebar>
+    <div class="container">
+      <div class="lightbox-close">
+        <div class="close-btn" data-modal-close=""><span class="btn-line"></span></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="lightbox-content">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-heading page-heading">
+                  <h2 class="section-title">Resume</h2>
+                  <div class="animated-bar"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Resume section-->
+            <div class="resume-section single-section">
+              <div class="row">
+                <!-- Education part-->
+                <div class="col-12 col-md-6">
+                  <div class="col-block education">
+                    <h3 class="col-title">Education</h3>
+                    <div class="resume-item"><span class="item-arrow"></span>
+                      <h5 class="item-title">Computer Science</h5><span class="item-details publicPath">Penn Foster / 2021 - 2022</span>
+                    </div>
+                    <div class="resume-item"><span class="item-arrow"></span>
+                      <h5 class="item-title">High School</h5><span class="item-details publicPath">Ware County High School / 2021 - 2021</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Experience part-->
+                <div class="col-12 col-md-6">
+                  <div class="col-block experience">
+                    <h3 class="col-title">Experience</h3>
+                    <div class="resume-item"><span class="item-arrow"></span>
+                      <h5 class="item-title">Software Engineer</h5><span class="item-details publicPath">Faded / 2021 - 2022</span>
+                    </div>
+                    <div class="resume-item"><span class="item-arrow"></span>
+                      <h5 class="item-title">Back-End / Front-End Developer</h5><span class="item-details publicPath">Icker / 2022 - 2022</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Skills section-->
+            <div class="skills-section single-section">
+              <div class="row">
+                <div class="col-12">
+                  <div class="section-heading">
+                    <h2 class="section-title">My Skills</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                    <%  codingLanguages.forEach(element => { %>
+                        <div class="single-skill" data-percentage="<%= element.options.percentile %>">
+                            <div class="skill-info"><span class="skill-name"><%= element.name %></span><span class="skill-percentage"></span></div>
+                            <div class="progress skill-progress">
+                              <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                    <% }) %>
 
-  <!-- Start Social Modal -->
-<div class="modal fade" id="discordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel" style="color: black;"><%= owner.username %> - Support Server </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <img src="<%= serverWidget %>" alt="" href="<%= supportServer %> " >
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-warning" onclick="window.location.href='<%= supportServer %>'"><i class="fa-brands fa-discord"></i> Join</button>
-            
+                </div>
+                <div class="col-12 col-md-6">
+                    <%  frameworks.forEach(element => { %>
+                        <div class="single-skill" data-percentage="<%= element.options.percentile %>">
+                            <div class="skill-info"><span class="skill-name"><%= element.name %></span><span class="skill-percentage"></span></div>
+                            <div class="progress skill-progress">
+                              <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                    <% }) %>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- End Social Modal -->
+  <!-- Portfolio lightbox-->
+  <div class="lightbox-wrapper" id="portfolio" data-simplebar>
+    <div class="container">
+      <div class="lightbox-close">
+        <div class="close-btn" data-modal-close=""><span class="btn-line"></span></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="lightbox-content">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-heading page-heading">
+                  <h2 class="section-title">Portfolio</h2>
+                  <p class="section-description publicPath">All of these Items on be found on my github!</p>
+                  <div class="animated-bar"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio section-->
+            <div class="portfolio-section single-section">
+              <div class="row">
+                <!-- Filter nav-->
+                <div class="col-12">
+                  <ul class="list-inline filter-control" role="group" aria-label="Filter Control">
+                    <li class="list-inline-item tab-active" data-filter="*">All</li>
+                    <li class="list-inline-item" data-filter=".bots">Bots</li>
+                    <li class="list-inline-item" data-filter=".websites">Websites</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Thumbnail list-->
+              <div class="portfolio-grid row">
+                <!-- Single item-->
+                <div class="single-item col-6 col-lg-4 websites"><a class="portfolio-item" href="assets/img/akenoWebsite.gif" data-lightbox>
+                    <div class="portfolio-wrapper"><img class="img-fluid cimage" alt="Item" src="assets/img/akenoWebsite.gif">
+                      <div class="item-content">
+                        <h6 class="content-title publicPath">Akeno Dev Website</h6>
+                      </div>
+                    </div>
+                  </a></div>
+                <!-- Single item-->
+                <div class="single-item col-6 col-lg-4 websites"><a class="portfolio-item" href="assets/img/reactTodoApp.png" data-lightbox>
+                    <div class="portfolio-wrapper"><img class="img-fluid cimage" alt="Item" src="assets/img/reactTodoApp.png">
+                      <div class="item-content">
+                        <h6 class="content-title">React todo app</h6>
+                      </div>
+                    </div>
+                  </a></div>
+                <!-- Single item-->
+                <div class="single-item col-6 col-lg-4 bots"><a class="portfolio-item" href="assets/img/goddessBot.png" data-lightbox>
+                    <div class="portfolio-wrapper"><img class="img-fluid cimage" alt="Item" src="assets/img/goddessBot.png">
+                      <div class="item-content">
+                        <h6 class="content-title">Goddess Bot</h6>
+                      </div>
+                    </div>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Blog lightbox-->
+  <div class="lightbox-wrapper" id="blog" data-simplebar>
+    <div class="container">
+      <div class="lightbox-close">
+        <div class="close-btn" data-modal-close=""><span class="btn-line"></span></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="lightbox-content">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-heading page-heading">
+                  <h2 class="section-title">My Blog</h2>
+                  <div class="animated-bar"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Blog section-->
+            <div class="blog-section single-section">
+              <div class="row justify-content-center">
+                <!-- Single post-->
+                <div class="col-12 col-sm-8 col-lg-4">
+                  <div class="card single-post"><a class="post-img" href="#0"><img class="card-img-top" src="assets/img/post-1.jpg" alt="Blog post"><span class="content-date">11 Dec, 20</span></a>
+                    <div class="card-body post-content"><a href="#0">
+                        <h5 class="card-title content-title">Top tools for Photographers</h5>
+                      </a>
+                      <p class="card-text content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single post-->
+                <div class="col-12 col-sm-8 col-lg-4">
+                  <div class="card single-post"><a class="post-img" href="#0"><img class="card-img-top" src="assets/img/post-2.jpg" alt="Blog post"><span class="content-date">12 Aug, 20</span></a>
+                    <div class="card-body post-content"><a href="#0">
+                        <h5 class="card-title content-title">Take a tour of my office</h5>
+                      </a>
+                      <p class="card-text content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single post-->
+                <div class="col-12 col-sm-8 col-lg-4">
+                  <div class="card single-post"><a class="post-img" href="#0"><img class="card-img-top" src="assets/img/post-3.jpg" alt="Blog post"><span class="content-date">4 Feb, 20</span></a>
+                    <div class="card-body post-content"><a href="#0">
+                        <h5 class="card-title content-title">How i became a Web Designer</h5>
+                      </a>
+                      <p class="card-text content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                    </div>
+                  </div>
+                </div><!-- Single post-->
+                <div class="col-12 col-sm-8 col-lg-4">
+                  <div class="card single-post"><a class="post-img" href="#0"><img class="card-img-top" src="assets/img/post-4.jpg" alt="Blog post"><span class="content-date">11 Dec, 19</span></a>
+                    <div class="card-body post-content"><a href="#0">
+                        <h5 class="card-title content-title">How to improve work performance</h5>
+                      </a>
+                      <p class="card-text content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single post-->
+                <div class="col-12 col-sm-8 col-lg-4">
+                  <div class="card single-post"><a class="post-img" href="#0"><img class="card-img-top" src="assets/img/post-5.jpg" alt="Blog post"><span class="content-date">15 Nov, 19</span></a>
+                    <div class="card-body post-content"><a href="#0">
+                        <h5 class="card-title content-title">How to work from home</h5>
+                      </a>
+                      <p class="card-text content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single post-->
+                <div class="col-12 col-sm-8 col-lg-4">
+                  <div class="card single-post"><a class="post-img" href="#0"><img class="card-img-top" src="assets/img/post-6.jpg" alt="Blog post"><span class="content-date">8 Aug, 19</span></a>
+                    <div class="card-body post-content"><a href="#0">
+                        <h5 class="card-title content-title">How to enjoy your business trip</h5>
+                      </a>
+                      <p class="card-text content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact lightbox-->
+  <div class="lightbox-wrapper" id="contact" data-simplebar>
+    <div class="container">
+      <div class="lightbox-close">
+        <div class="close-btn" data-modal-close=""><span class="btn-line"></span></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="lightbox-content">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-heading page-heading">
+                  <p class="section-description">Feel free to contact me anytimes</p>
+                  <h2 class="section-title">Get in Touch</h2>
+                  <div class="animated-bar"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Contact section-->
+            <div class="contact-section single-section">
+              <div class="row">
+                <!-- Contact form-->
+                <div class="col-12 col-lg-7">
+                  <form class="contact-form" id="contact-form" action="php/contact.php">
+                    <h4 class="content-title">Message Me</h4>
+                    <div class="row">
+                      <div class="col-12 col-md-6 form-group"><input class="form-control" id="contact-name" type="text" name="name" placeholder="Name" required=""></div>
+                      <div class="col-12 col-md-6 form-group"><input class="form-control" id="contact-email" type="email" name="email" placeholder="Email" required=""></div>
+                      <div class="col-12 form-group"><input class="form-control" id="contact-subject" type="text" name="subject" placeholder="Subject" required=""></div>
+                      <div class="col-12 form-group form-message"><textarea class="form-control" id="contact-message" name="message" placeholder="Message" rows="5" required=""></textarea></div>
+                      <div class="col-12 form-submit"><button class="btn button-main button-scheme" id="contact-submit" type="submit">Send Message</button>
+                        <p class="contact-feedback"></p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- Contact info-->
+                <div class="col-12 col-lg-5">
+                  <div class="contact-info">
+                    <h4 class="content-title">Contact Info</h4>
+                    <p class="info-description">Always available for freelance work if the right project comes along, Feel free to contact me!</p>
+                    <ul class="list-unstyled list-info">
+                      <li>
+                        <div class="media align-items-center"><span class="info-icon"><i class="icon ion-logo-ionic"></i></span>
+                          <div class="media-body info-details">
+                            <h6 class="info-type">Name</h6><span class="info-value"></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="media align-items-center"><span class="info-icon"><i class="icon ion-md-map"></i></span>
+                          <div class="media-body info-details">
+                            <h6 class="info-type">Location</h6><span class="info-value">Waycross GA</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                      </li>
+                      <li>
+                        <div class="media align-items-center"><span class="info-icon"><i class="icon ion-md-send"></i></span>
+                          <div class="media-body info-details">
+                            <h6 class="info-type">Email Me</h6><span class="info-value"><a href="mailto:owner@akenodev.xyz">owner@akenodev.xyz</a></span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+
+<!-- Redirect Popup -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Redirect</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          You will be redirected out of the website, are you sure you want to continue?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Yes Redirect</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <noscript>
     <meta http-equiv="refresh" content="0; URL=/error?err=Please Enable Javascript for this Website!&code=505" />
 </noscript>
-    <!--JS FILES-->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/jquery.easing.min.js"></script>
-    <script src="./assets/js/jquery.appear.min.js"></script>
-    <script src="./assets/js/jquery.countTo.js"></script>
-    <script src="./assets/js/scrollspy.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/aos.js"></script>
-    <script src="./assets/js/typed.min.js"></script>
-    <script src="./assets/js/parallax.min.js"></script>
-    <script src="./assets/js/alert.js"></script>
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/custom.js"></script>
-    <script src="https://kit.fontawesome.com/b2ded0cdec.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/restrict.js"></script>
 
-    <!-- window.onload = function () {
-            setTimeout(function () {
-                if (typeof (window.google_jobrunner) === "undefined") {
-                    console.log("ad blocker installed");
-                } else {
-                    console.log("no ad blocking found.");
-                }
-            }, 3000);
-        }; -->
+
+
+  <!-- Scripts-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/animatedModal.js"></script>
+  <script src="assets/js/tiny-slider.js"></script>
+  <script src="assets/js/lity.min.js"></script>
+  <script src="assets/js/simplebar.min.js"></script>
+  <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- Custom JS (Add your custom JS scripts to this file)-->
+  <script src="assets/js/custom.js"></script>
+  <!-- Fontawesome support -->
+  <script src="https://kit.fontawesome.com/b2ded0cdec.js" crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

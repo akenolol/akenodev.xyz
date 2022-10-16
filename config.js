@@ -1,5 +1,5 @@
 module.exports.webApp = {
-    port: 4000,
+    port: 8080,
     host: "https://akenodev.xyz",
     isOffline: false,
 },
@@ -36,34 +36,10 @@ module.exports.owner = {
                 percentile: "69"
             }
         },
-        "CSS": {
-            name: "CSS",
-            options: {
-                percentile: "87"
-            }
-        },
-        "Python": {
-            name: "Python",
-            options: {
-                percentile: "67"
-            }
-        },
-        "Java": {
-            name: "Java",
-            options: {
-                percentile: "40"
-            }
-        },
         "C#": {
             name: "C#",
             options: {
                 percentile: "90"
-            }
-        },
-        "C++": {
-            name: "C++",
-            options: {
-                percentile: "54"
             }
         },
         "C": {
@@ -72,21 +48,9 @@ module.exports.owner = {
                 percentile: "50"
             }
         },
-        "Shell": {
-            name: "Shell",
-            options: {
-                percentile: "30"
-            }
-        },
     };
 
 module.exports.frameworks = {
-    Express: {
-        name: "Express",
-        options: {
-            percentile: "98",
-        },
-    },
     React: {
         name: "React",
         options: {
@@ -109,30 +73,6 @@ module.exports.frameworks = {
         name: "EJS",
         options: {
             percentile: "98",
-        }
-    },
-    Nextjs: {
-        name: "Next.js",
-        options: {
-            percentile: "53",
-        }
-    },
-    ReactNative: {
-        name: "React Native",
-        options: {
-            percentile: "32",
-        }
-    },
-    Socketio: {
-        name: "Socket.io",
-        options: {
-            percentile: "31",
-        }
-    },
-    Svelte: {
-        name: "Svelte",
-        options: {
-            percentile: "27",
         }
     },
     Electron: {
