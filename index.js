@@ -10,7 +10,7 @@ const os = require("os");
 const Status = require("./utils/status.js");
 const DiscordClient = require("./utils/discordClient.js");
 const discordClient = new DiscordClient();
-const config = require("./config");
+const config = require("./t.config");
 const port = process.env.PORT || config.webApp.port;
 const status = new Status(`${config.webApp.host}`);
 const { Octokit } = require("@octokit/core");
@@ -89,11 +89,19 @@ app.get("/", async (req, res) => {
     for (const technology in tech) {
       techArray.push(tech[technology]);
     }
+
+    // Get a random audio from ./public/assets/audio
+    const audioFiles = fs.readdirSync(path.join(__dirname, "public", "assets", "audio"));
+    const randomAudio = audioFiles[Math.floor(Math.random() * audioFiles.length)];
+  
+    const audioPath = path.join(__dirname, "public", "assets", "audio", randomAudio);
+
     
 
     const companyReal = userData.company.replace("@", "");
     res.render("index", {
       owner: owner,
+      audio: audioPath,
       supportServer: config.owner.supportServer,
       projects: projectsArray,
       currentIssues: issuesArray,
@@ -173,7 +181,7 @@ app.get("/reportbug", async (req, res) => {
   });
 })
 
-app.get("/redirect", (req, res) => {
+app.get("/ridairekuto", (req, res) => {
   const url = req.query.url;
   if (url == null || url == "" || url == undefined) {
     res.json({
