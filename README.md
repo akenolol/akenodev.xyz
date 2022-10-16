@@ -1,72 +1,67 @@
 
-# Akeno Dev Website
+# Ake no kaihatsu-sha saito
 
-The website for echoanime.xyz
+Akenodev. Xyz no u~ebu saito
 
-![Discord](https://img.shields.io/discord/1014190469628055552?style=plastic)
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![Fuwa](https://img.shields.io/discord/1014190469628055552?style=plastic)
+[![MIT raisensu](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ____
 
-## Authors
+## Chosha
 
-- [@akenolol](https://www.github.com/akenolol)
-- [@Furdox](https://github.com/Furdox)
+- [@Akenorōru](https://www.github.com/akenolol)
+- [@Fādokkusu](https://github.com/Furdox)
 
 
-## Reference
+## Sanshō
 
-#### Access Home Page
+#### Hōmupēji ni akusesu
 
 ```http
-  GET /
+  ERU /
 ```
 
 
-#### Access Redirect Page
+#### Akusesuridairekutopēji
 
 ```http
-  GET /redirect
+  ERU /ridairekuto
 ```
 
-| Parameter | Type     | Description                |
+| Paramēta | Taipu     | Setsumei                |
 | :-------- | :------- | :------------------------- |
-| `url` | `string` | **Required**. The URL to redirect to.|
+| `url` | `Sutoringu` | **Hissu**. Ridairekuto-saki no URL.|
 
-### Access Status Page
-
-```http
-  GET /status
-```
 
 
 ___
 
 
-## Run Locally
+## Rōkaru de jikkō
 
-Clone the project
-
-```bash
-  git clone https://github.com/akenolol/akenolol.github.io
-```
-
-Go to the project directory
+Purojekuto o fukusei suru
 
 ```bash
-  cd akenolol.github.io
+  git clone https://github.com/akenolol/akenodev.xyz -b jp
 ```
 
-Install dependencies
+Purojekuto direkutori ni idō shimasu.
+
+```bash
+  cd akenodev.xyz
+```
+
+Isonkankei o insutōru suru
 
 ```bash
   npm install
 ```
 
-Edit `config.js` to fit your needs.
+Hitsuyōniōjite `config.js' o henshū shimasu.
 
 
-Start the server
+Sābā o kidō suru
 
 ```bash
   npm run start
